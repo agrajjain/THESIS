@@ -1,0 +1,10 @@
+\chapter{Overview of Simultaneous Localization and Mapping}
+
+To give a broad overview, the important parts of SLAM are 
+	\begin{itemize}
+		\item \textbf{Landmark Extraction:} Use exteroceptive sensors on the robot to detect prominent features of the environment. These can either be generalized features or specific landmarks about which we have prior information 
+		\item \textbf{Data Association:} The landmarks or features detected in the previous step is associated with existing features in the map that has been generated till now. 
+		\item \textbf{State Estimation:} Proprioceptive sensors are used to estimate where the robot might be in the map. 
+		\item \textbf{State Update:} The position of the robot is corrected based on the deviations of the features with the features on the existing map. 
+		\item \textbf{Landmark Update:} The positions on the features are also corrected based on the correction in the position of the robot. 
+	\end{itemize}

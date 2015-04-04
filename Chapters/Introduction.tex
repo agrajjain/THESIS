@@ -1,3 +1,9 @@
 \chapter{Introduction}
 
-	This is an introduction
+	Autonomous robots are growing increasingly popular in various fields. They occupy a major fraction of robotics based research today. Autonomous robots take many forms, from mobile robots to fixed manipulators. Even within mobile robots, the diversity in the type of locomotion, the terrain and the targeted use is huge. There are autonomous robots intended for indoor use, for rough terrains, for underwater and also aerial autonomous robots. 
+	
+	But irrespective of terrain, autonomous mobile robots all have one challenge in common. The ability to map their surroundings while simultaneously figuring out where exactly they are in that map. This concept of Simultaneous Localization and Mapping or SLAM is a vast field of research with numerous algorithms and implementations. Each of these algorithms, have their unique advantages and drawbacks making it impossible to pinpoint a generalized \textit{best algorithm}. 
+	
+	Going a bit into SLAM we first use the proprioceptive sensors to get an estimate of our motion. Then we use the exteroceptive sensors to get and idea of how our environment looks like. In subsequent time steps, we compare the environmental features we see, to our previous idea of our environment and use the difference to both improve the our position estimate and to improve our map of our surroundings.
+	 
+	Hence we can see that, it consists of many sub parts within it which we shall discuss in depth at a later point. Each of these sub parts offer their own challenges and are again focused on the specific application.

@@ -2,3 +2,15 @@
 \contentsline {chapter}{LIST OF FIGURES}{iii}
 \contentsline {chapter}{LIST OF TABLES}{iv}
 \contentsline {chapter}{\numberline {I. }Introduction}{1}
+\contentsline {chapter}{\numberline {II. }Overview of Simultaneous Localization and Mapping}{2}
+\contentsline {chapter}{\numberline {III. }Variations to Existing methods}{3}
+\contentsline {section}{\numberline {3.1}Proposed method}{3}
+\contentsline {section}{\numberline {3.2}Theoretical reasoning}{3}
+\contentsline {section}{\numberline {3.3}Specific application}{3}
+\contentsline {chapter}{\numberline {IV. }Experimental Platform}{4}
+\contentsline {section}{\numberline {4.1}Mechanical Design}{4}
+\contentsline {section}{\numberline {4.2}Electrical Components}{4}
+\contentsline {section}{\numberline {4.3}Control Diagram}{4}
+\contentsline {section}{\numberline {4.4}Code Structure}{4}
+\contentsline {chapter}{\numberline {V. }Experimental Results}{5}
+\contentsline {chapter}{\numberline {VI. }Conclusion}{6}

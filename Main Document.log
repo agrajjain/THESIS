@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.7)  30 MAR 2015 21:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.7)  1 APR 2015 20:26
 entering extended mode
 **Main*Document.tex
 ("D:\THESIS\Main Document.tex"
@@ -156,11 +156,11 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 \c@remark=\count107
 \c@example=\count108
 \c@assumption=\count109
- ("D:\THESIS\Main Document.aux" (D:\THESIS\publications.aux)
-(D:\THESIS\acknowledgements.aux) (D:\THESIS\abstract.aux)
+ ("D:\THESIS\Main Document.aux" (D:\THESIS\Roman\publications.aux)
+(D:\THESIS\Roman\acknowledgements.aux) (D:\THESIS\Roman\abstract.aux)
 (D:\THESIS\Chapters\Introduction.aux) (D:\THESIS\Chapters\SLAM.aux)
-(D:\THESIS\Chapters\Variations.aux) (D:\THESIS\Chapters\Experimental.aux)
-(D:\THESIS\Chapters\Eperimental.aux) (D:\THESIS\Chapters\Conclusion.aux))
+(D:\THESIS\Chapters\Improvements.aux) (D:\THESIS\Chapters\Platform.aux)
+(D:\THESIS\Chapters\results.aux) (D:\THESIS\Chapters\Conclusion.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -191,10 +191,21 @@ LaTeX Font Info:    ... okay on input line 21.
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-No file publications.tex.
-No file acknowledgements.tex.
-No file abstract.tex.
-("D:\THESIS\Main Document.toc")
+No file ./Roman/publications.tex.
+No file ./Roman/acknowledgements.tex.
+No file ./Roman/abstract.tex.
+("D:\THESIS\Main Document.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 7.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
 \tf@toc=\write3
  [2
 
@@ -204,60 +215,72 @@ No file abstract.tex.
 
 
 
-] ("D:\THESIS\Main Document.lof")
+]
+("D:\THESIS\Main Document.lof")
 \tf@lof=\write4
  [3
 
-]
-("D:\THESIS\Main Document.lot")
+] ("D:\THESIS\Main Document.lot")
 \tf@lot=\write5
  [4
 
-] (D:\THESIS\Chapters\Introduction.tex
+]
+(D:\THESIS\Chapters\Introduction.tex
 CHAPTER 1
 ) [1
 
 
-]
-No file ./Chapters/SLAM.tex.
-[2
+] (D:\THESIS\Chapters\SLAM.tex
+CHAPTER 2
+) [2
 
 
 
-]
-No file ./Chapters/Variations.tex.
-No file ./Chapters/Experimental.tex.
-[3
+] (D:\THESIS\Chapters\Improvements.tex
+CHAPTER 3
+) [3
 
 
 
+] (D:\THESIS\Chapters\Platform.tex
+CHAPTER 4
+) [4
 
-]
-No file ./Chapters/Eperimental.tex.
-[4
 
 
-]
-No file ./Chapters/Conclusion.tex.
-("D:\THESIS\Main Document.aux" (D:\THESIS\publications.aux)
-(D:\THESIS\acknowledgements.aux) (D:\THESIS\abstract.aux)
+] (D:\THESIS\Chapters\results.tex
+CHAPTER 5
+) [5
+
+
+
+] (D:\THESIS\Chapters\Conclusion.tex
+CHAPTER 6
+) [6
+
+
+
+] ("D:\THESIS\Main Document.aux" (D:\THESIS\Roman\publications.aux)
+(D:\THESIS\Roman\acknowledgements.aux) (D:\THESIS\Roman\abstract.aux)
 (D:\THESIS\Chapters\Introduction.aux) (D:\THESIS\Chapters\SLAM.aux)
-(D:\THESIS\Chapters\Variations.aux) (D:\THESIS\Chapters\Experimental.aux)
-(D:\THESIS\Chapters\Eperimental.aux) (D:\THESIS\Chapters\Conclusion.aux)) ) 
+(D:\THESIS\Chapters\Improvements.aux) (D:\THESIS\Chapters\Platform.aux)
+(D:\THESIS\Chapters\results.aux) (D:\THESIS\Chapters\Conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 1429 strings out of 493921
- 18662 string characters out of 3147268
- 76445 words of memory out of 3000000
- 4701 multiletter control sequences out of 15000+200000
- 4545 words of font info for 17 fonts, out of 3000000 for 9000
+ 1501 strings out of 493921
+ 19872 string characters out of 3147268
+ 78445 words of memory out of 3000000
+ 4736 multiletter control sequences out of 15000+200000
+ 12341 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 23i,4n,23p,216b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on "Main Document.pdf" (8 pages, 30593 bytes).
+ 23i,4n,23p,543b,129s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "Main Document.pdf" (10 pages, 61349 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
