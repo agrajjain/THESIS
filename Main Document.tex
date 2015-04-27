@@ -1,4 +1,4 @@
-\documentstyle[epic,eepic,graphics]{./styleDocs/poly3}
+\documentstyle[epic,eepic,graphicx,cite,amsmath,caption,subcaption,algorithm,algorithmicx,algpseudocode]{./styleDocs/poly3}
 %\mathindent 0pt
 \input{epsf}
 \renewcommand{\baselinestretch}{1.6}
@@ -18,8 +18,12 @@
 \newtheorem{assumption}{Assumption}[chapter]
 \newcommand{\bassump}{\begin{assumption}\rm}
 \newcommand{\eassump}{\end{assumption}}
+\newcommand{\ekf}{Extended Kalman Filter }
+\newcommand{\slam}{Simultaneous Localization and Mapping }
+\newcommand{\imp}{Integrated Mobile Platform }
+\graphicspath{{./Images/Encoder/}, {./Images/Spike/}, {./Images/Ransac/}}
 \begin{document}
-\title{Implementation of Simultaneous Localization and Mapping on Semi Autonomous Wheeled robot}
+\title{Study on various implementations of Extended Kalman Filter based Simultaneous Localization And Mapping}
 \author{Agraj Jain}
 \committee{ \\ \\ \\ \\ \ \\ \ \\ \ \\Copy Number:}
 %\mstitlepage
@@ -27,15 +31,14 @@
 \textwidth=6.0 in
 \textheight=9.0 in
 \chapter*{VITA}
-\vitaentry{Mar 20. 1991}{Born}
-\vitaentry{}{}
-\vitaentry{}{}
-\vitaentry{}{}
+\vitaentry{March 1991}{Born}
+\vitaentry{June 2009}{Graduated High School}
+\vitaentry{May 2013}{Bachelor of Technology in Electrical Engineering}
+\vitaentry{May 2015}{Master of Science in Electrical Engineering \textit{(expected)}}
 \setcounter{page}{1}
 \pagenumbering{roman}
 \include{./Roman/publications}
-\include{./Roman/acknowledgements}
-\include{./Roman/abstract}
+\include{./Roman/acknowledgements} 
 \tableofcontents
 \listoffigures
 \listoftables
@@ -44,9 +47,17 @@
 \pagenumbering{arabic}
 \include{./Chapters/Introduction}
 \include{./Chapters/SLAM}
-\include{./Chapters/Improvements}
 \include{./Chapters/Platform}
-\include{./Chapters/results}
+\include{./Chapters/Encoder}
+\include{./Chapters/Spike}
+\include{./Chapters/Ransac}
+\include{./Chapters/Hough}
+\include{./Chapters/Visual}
+%\include{./Chapters/results} 
 \include{./Chapters/Conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,bibliography}
+
 %\include{bib}
 \end{document}

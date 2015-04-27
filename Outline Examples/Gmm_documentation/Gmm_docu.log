@@ -1,0 +1,547 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.7)  27 APR 2015 00:43
+entering extended mode
+**Gmm_docu.tex
+("D:\THESIS\Outline Examples\Gmm_documentation\Gmm_docu.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pstricks\pstricks.sty"
+Package: pstricks 2013/05/21 v0.56 LaTeX wrapper for `PSTricks' (RN,HV)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\base\pstricks.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\pst-xkey.tex"
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+\XKV@depth=\count88
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\keyval.tex"))))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\base\pst-fp.tex"
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count89
+\pstFP@xia=\count90
+\pstFP@xib=\count91
+\pstFP@xfa=\count92
+\pstFP@xfb=\count93
+\pstFP@rega=\count94
+\pstFP@regb=\count95
+\pstFP@regs=\count96
+\pstFP@times=\count97
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks16
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.te
+x"
+\pgfkeys@tmptoks=\toks19
+)) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+\pgffor@iter=\dimen103
+\pgffor@skip=\dimen104
+\pgffor@stack=\toks20
+\pgffor@toks=\toks21
+)
+\psLoopIndex=\count98
+
+`PSTricks' v2.43  <2013/05/12> (tvz)
+\pst@dima=\dimen105
+\pst@dimb=\dimen106
+\pst@dimc=\dimen107
+\pst@dimd=\dimen108
+\pst@dimg=\dimen109
+\pst@dimh=\dimen110
+\pst@dimm=\dimen111
+\pst@dimn=\dimen112
+\pst@dimo=\dimen113
+\pst@dimp=\dimen114
+\pst@hbox=\box26
+\pst@ibox=\box27
+\pst@boxg=\box28
+\pst@cnta=\count99
+\pst@cntb=\count100
+\pst@cntc=\count101
+\pst@cntd=\count102
+\pst@cntg=\count103
+\pst@cnth=\count104
+\pst@cntm=\count105
+\pst@cntn=\count106
+\pst@cnto=\count107
+\pst@cntp=\count108
+\@zero=\count109
+\pst@toks=\toks22
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\base\pstricks.con")
+\psunit=\dimen115
+\psxunit=\dimen116
+\psyunit=\dimen117
+\pst@C@@rType=\count110
+\pslinewidth=\dimen118
+\psk@startLW=\dimen119
+\psk@endLW=\dimen120
+\pst@customdefs=\toks23
+\pslinearc=\dimen121
+\pst@symbolStep=\dimen122
+\pst@symbolWidth=\dimen123
+\pst@symbolLinewidth=\dimen124
+\everypsbox=\toks24
+\psframesep=\dimen125
+\pslabelsep=\dimen126
+\sh@wgridXunit=\dimen127
+\sh@wgridYunit=\dimen128
+\pst@shift=\dimen129
+\theoverlaybox=\box29
+)
+File: pstricks.tex 2013/05/12 v2.43 `PSTricks' (tvz,hv)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\base\pst-fp.tex")
+File: pst-fp.tex 2013/05/12 v2.43 `PST-fp' (hv)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count111
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks25
+\ex@=\dimen130
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen131
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count112
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count113
+\leftroot@=\count114
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count115
+\DOTSCASE@=\count116
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen132
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count117
+\c@MaxMatrixCols=\count118
+\dotsspace@=\muskip10
+\c@parentequation=\count119
+\dspbrk@lvl=\count120
+\tag@help=\toks26
+\row@=\count121
+\column@=\count122
+\maxfields@=\count123
+\andhelp@=\toks27
+\eqnshift@=\dimen133
+\alignsep@=\dimen134
+\tagshift@=\dimen135
+\tagwidth@=\dimen136
+\totwidth@=\dimen137
+\lineht@=\dimen138
+\@envbody=\toks28
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen139
+\WF@size=\dimen140
+\c@WF@wrappedlines=\count124
+\WF@box=\box32
+\WF@everypar=\toks30
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+Package: placeins 2005/04/18  v 2.2
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+No file Gmm_docu.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count125
+\scratchdimen=\dimen143
+\scratchbox=\box33
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen144
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks32
+)
+
+LaTeX Warning: No \author given.
+
+[1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+No file Gmm_docu.toc.
+\tf@toc=\write3
+[1
+
+]
+Chapter 1.
+<GMM1.jpg, id=11, 307.90031pt x 304.88907pt>
+File: GMM1.jpg Graphic file (type jpg)
+ <use GMM1.jpg>
+Package pdftex.def Info: GMM1.jpg used on input line 20.
+(pdftex.def)             Requested size: 390.0pt x 386.21388pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<GMM2.jpg, id=12, 225.09094pt x 316.18124pt>
+File: GMM2.jpg Graphic file (type jpg)
+ <use GMM2.jpg>
+Package pdftex.def Info: GMM2.jpg used on input line 27.
+(pdftex.def)             Requested size: 312.00119pt x 438.31346pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmr/m/n/12 Encoder and
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 Power Junc-tion
+ []
+
+
+Overfull \hbox (44.44249pt too wide) in paragraph at lines 32--48
+[][] 
+ []
+
+[2
+
+] [3] [4 <D:/THESIS/Outline Examples/Gmm_documentation/GMM1.jpg>] [5 <D:/THESIS
+/Outline Examples/Gmm_documentation/GMM2.jpg>]
+Chapter 2.
+<commdiag.jpg, id=25, 664.4825pt x 967.615pt>
+File: commdiag.jpg Graphic file (type jpg)
+ <use commdiag.jpg>
+Package pdftex.def Info: commdiag.jpg used on input line 55.
+(pdftex.def)             Requested size: 312.00119pt x 454.33618pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6
+
+] [7 <D:/THESIS/Outline Examples/Gmm_documentation/commdiag.jpg>]
+<powerdiag.jpg, id=33, 714.67pt x 897.3525pt>
+File: powerdiag.jpg Graphic file (type jpg)
+ <use powerdiag.jpg>
+Package pdftex.def Info: powerdiag.jpg used on input line 62.
+(pdftex.def)             Requested size: 312.00119pt x 391.75551pt.
+ [8
+
+ <D:/THESIS/Outline Examples/Gmm_documentation/powerdiag.jpg>]
+Chapter 3.
+
+LaTeX Warning: File `autopilot.jpg' not found on input line 72.
+
+
+! Package pdftex.def Error: File `autopilot.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ...graphics[width=1\textwidth]{autopilot.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9
+
+] [10] <encodercircuit2.jpg, id=44, 380.17032pt x 278.54062pt>
+File: encodercircuit2.jpg Graphic file (type jpg)
+
+<use encodercircuit2.jpg>
+Package pdftex.def Info: encodercircuit2.jpg used on input line 101.
+(pdftex.def)             Requested size: 390.0pt x 285.74823pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: File `encoderports2.jpg' not found on input line 129.
+
+
+! Package pdftex.def Error: File `encoderports2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 ...s[width=0.5\textwidth]{encoderports2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11
+
+ <D:/THESIS/Outline Examples/Gmm_documentation/encodercircuit2.jpg>]
+[12] [13] <motordriver2.jpg, id=57, 283.0575pt x 295.85532pt>
+File: motordriver2.jpg Graphic file (type jpg)
+
+<use motordriver2.jpg>
+Package pdftex.def Info: motordriver2.jpg used on input line 165.
+(pdftex.def)             Requested size: 234.00238pt x 244.58925pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14
+
+ <D:/THESIS/Outline Examples/Gmm_documentation/motordriver2.jpg>]
+
+LaTeX Warning: File `odroidfront.png' not found on input line 192.
+
+
+! Package pdftex.def Error: File `odroidfront.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 ...phics[width=1\textwidth]{odroidfront.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `odroidback2.jpg' not found on input line 212.
+
+
+! Package pdftex.def Error: File `odroidback2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.212 ...phics[width=1\textwidth]{odroidback2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15] [16] [17] [18] <powercircuit2.jpg, id=75, 425.33907pt x 301.8778pt>
+File: powercircuit2.jpg Graphic file (type jpg)
+
+<use powercircuit2.jpg>
+Package pdftex.def Info: powercircuit2.jpg used on input line 235.
+(pdftex.def)             Requested size: 312.00119pt x 221.44682pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19
+
+ <D:/THESIS/Outline Examples/Gmm_documentation/powercircuit2.jpg>] [20]
+Chapter 4.
+
+LaTeX Warning: File `filter.jpg' not found on input line 273.
+
+
+! Package pdftex.def Error: File `filter.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.273 ...graphics[width=0.6\textwidth]{filter.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21
+
+] [22]
+Chapter 5.
+
+Overfull \hbox (18.34883pt too wide) in paragraph at lines 316--316
+[]\OT1/cmr/m/n/12 http://www.usdigital.com/products/encoders/absolute/rotary/sh
+aft/MA3 
+ []
+
+
+Overfull \hbox (6.21562pt too wide) in paragraph at lines 331--331
+[]\OT1/cmr/m/n/12 https://www.dimensionengineering.com/datasheets/Sabertooth2x1
+2.pdf 
+ []
+
+[23
+
+]
+Overfull \hbox (32.5851pt too wide) in paragraph at lines 346--346
+[]\OT1/cmr/m/n/12 http://www.digikey.com/product-detail/en/PTN78020WAH/296-2051
+5-
+ []
+
+[24] ("D:\THESIS\Outline Examples\Gmm_documentation\Gmm_docu.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4510 strings out of 493921
+ 64833 string characters out of 3147268
+ 149392 words of memory out of 3000000
+ 7754 multiletter control sequences out of 15000+200000
+ 10094 words of font info for 37 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 37i,10n,51p,627b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Gmm_docu.pdf (25 pages, 446850 bytes).
+PDF statistics:
+ 110 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

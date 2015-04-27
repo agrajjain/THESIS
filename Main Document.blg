@@ -1,0 +1,22 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Main Document.aux
+A level-1 auxiliary file: ./Roman/publications.aux
+A level-1 auxiliary file: ./Roman/acknowledgements.aux
+A level-1 auxiliary file: ./Roman/abstract.aux
+A level-1 auxiliary file: ./Chapters/Introduction.aux
+A level-1 auxiliary file: ./Chapters/SLAM.aux
+A level-1 auxiliary file: ./Chapters/Platform.aux
+A level-1 auxiliary file: ./Chapters/Improvements.aux
+A level-1 auxiliary file: ./Chapters/results.aux
+A level-1 auxiliary file: ./Chapters/Conclusion.aux
+The style file: IEEEtran.bst
+Database file #1: IEEEabrv.bib
+Database file #2: bibliography.bib
+Warning--I didn't find a database entry for ""
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--missing institution in WelchandBishop1995
+Warning--empty author and editor in Maybeck1979
+
+Done.
+(There were 3 warnings)

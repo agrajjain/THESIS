@@ -1,5 +1,23 @@
-\chapter{Experimental Platform}
+\chapter{Integrated Mobile Platform}
+\label{cha:Platform}
+\section{Overview}
+
+The primary purpose of building the \imp or the IMP is to test the various algorithms that are used in SLAM. Since SLAM is mostly used for real time control, it is desirable to have platform with the capabilities to implement that. For this we need to keep the following considerations in mind. 
+\begin{description}
+	\item[Movement] Has to be able to move with a variety of speeds and relatively small turning radii as it is to be used indoors. 
+	\item[Self-position acknowledgment] Has to have proprioceptive sensors which give an estimate of it's own position and orientation.
+	\item[Environment sensing] Has to have sensors to understand the environment. 
+	\item[On-board computer] Has to have sufficient on-board processing power to do the computations necessary for SLAM.
+	\item[Real time controller] Has to have a capability to implement real time control.
+	\item[Communication] Has to have robust communication between the different components and also with the ground station. 
+	\item[Memory] Has to have sufficient on-board memory to collect data to enable testing of SLAM algorithms off line.  
+	\item[Flexibility] The various components both hardware and software need to be designed in such a way that it is easy to switch them around.
+\end{description}
+
+In each stage these requirements act as guiding principles with emphasis given to the flexibility aspect as it is essentially a research platform.  
 \section{Mechanical Design}
+
+The IMP is designed as a differential drive platform as seen in figure ... 
 \section{Electrical Components}
 \section{Control Diagram}
-\section{Code Structure}
+\section{Code Structure} 

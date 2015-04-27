@@ -1,16 +1,40 @@
 \contentsline {chapter}{VITA}{i}
-\contentsline {chapter}{LIST OF FIGURES}{iii}
-\contentsline {chapter}{LIST OF TABLES}{iv}
+\contentsline {chapter}{LIST OF FIGURES}{iv}
+\contentsline {chapter}{LIST OF TABLES}{v}
 \contentsline {chapter}{\numberline {I. }Introduction}{1}
-\contentsline {chapter}{\numberline {II. }Overview of Simultaneous Localization and Mapping}{2}
-\contentsline {chapter}{\numberline {III. }Variations to Existing methods}{3}
-\contentsline {section}{\numberline {3.1}Proposed method}{3}
-\contentsline {section}{\numberline {3.2}Theoretical reasoning}{3}
-\contentsline {section}{\numberline {3.3}Specific application}{3}
-\contentsline {chapter}{\numberline {IV. }Experimental Platform}{4}
-\contentsline {section}{\numberline {4.1}Mechanical Design}{4}
-\contentsline {section}{\numberline {4.2}Electrical Components}{4}
-\contentsline {section}{\numberline {4.3}Control Diagram}{4}
-\contentsline {section}{\numberline {4.4}Code Structure}{4}
-\contentsline {chapter}{\numberline {V. }Experimental Results}{5}
-\contentsline {chapter}{\numberline {VI. }Conclusion}{6}
+\contentsline {chapter}{\numberline {II. }Overview of Extended Kalman Filter based Simultaneous Localization and Mapping}{3}
+\contentsline {section}{\numberline {2.1}Overview of SLAM}{3}
+\contentsline {section}{\numberline {2.2}Kalman Filter}{4}
+\contentsline {section}{\numberline {2.3}Extended Kalman Filter}{5}
+\contentsline {section}{\numberline {2.4}Application of Extended Kalman Filter for SLAM}{6}
+\contentsline {chapter}{\numberline {III. }Integrated Mobile Platform}{8}
+\contentsline {section}{\numberline {3.1}Overview}{8}
+\contentsline {section}{\numberline {3.2}Mechanical Design}{9}
+\contentsline {section}{\numberline {3.3}Electrical Components}{9}
+\contentsline {section}{\numberline {3.4}Control Diagram}{9}
+\contentsline {section}{\numberline {3.5}Code Structure}{9}
+\contentsline {chapter}{\numberline {IV. }Encoder Based Odometry for State Estimate}{10}
+\contentsline {section}{\numberline {4.1}Overview}{10}
+\contentsline {section}{\numberline {4.2}Motion model and the corresponding differentials}{10}
+\contentsline {section}{\numberline {4.3}Experimental results}{13}
+\contentsline {chapter}{\numberline {V. }Feature Extraction with Point Features}{14}
+\contentsline {section}{\numberline {5.1}Overview}{14}
+\contentsline {section}{\numberline {5.2}Feature Extraction Algorithm}{14}
+\contentsline {section}{\numberline {5.3}Measurement Model and the corresponding Jacobian matrices}{16}
+\contentsline {section}{\numberline {5.4}Experimental results}{17}
+\contentsline {chapter}{\numberline {VI. }RANSAC based linear feature Extraction}{19}
+\contentsline {section}{\numberline {6.1}Overview}{19}
+\contentsline {section}{\numberline {6.2}Feature Extraction Algorithm}{19}
+\contentsline {section}{\numberline {6.3}Measurement Model and the corresponding differentials}{20}
+\contentsline {section}{\numberline {6.4}Experimental results}{23}
+\contentsline {chapter}{\numberline {VII. }Hough transform based linear feature extractor}{24}
+\contentsline {section}{\numberline {7.1}Overview}{24}
+\contentsline {section}{\numberline {7.2}Feature Extraction Algorithm}{24}
+\contentsline {section}{\numberline {7.3}Measurement Model and the corresponding differentials}{24}
+\contentsline {section}{\numberline {7.4}Experimental results}{24}
+\contentsline {chapter}{\numberline {VIII. }Visual odometry}{25}
+\contentsline {section}{\numberline {8.1}Overview}{25}
+\contentsline {section}{\numberline {8.2}Conceptual Description}{25}
+\contentsline {section}{\numberline {8.3}Implementation and integration with EKF SLAM}{25}
+\contentsline {section}{\numberline {8.4}Experimental results}{25}
+\contentsline {chapter}{\numberline {IX. }Conclusion}{26}
