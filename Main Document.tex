@@ -1,6 +1,7 @@
-\documentstyle[epic,eepic,graphicx,cite,amsmath,caption,subcaption,algorithm,algorithmicx,algpseudocode]{./styleDocs/poly3}
+\documentstyle[epic,eepic,graphicx,cite,mathtools,caption,subcaption,algorithm,algorithmicx,algpseudocode,longtable]{./styleDocs/poly3}
 %\mathindent 0pt
 \input{epsf}
+
 \renewcommand{\baselinestretch}{1.6}
 \newtheorem{theorem}{Theorem}[chapter]
 \newcommand{\btheorem}{\begin{theorem}\rm}
@@ -21,7 +22,9 @@
 \newcommand{\ekf}{Extended Kalman Filter }
 \newcommand{\slam}{Simultaneous Localization and Mapping }
 \newcommand{\imp}{Integrated Mobile Platform }
-\graphicspath{{./Images/Encoder/}, {./Images/Spike/}, {./Images/Ransac/}}
+\graphicspath{{./Images/Encoder/}, {./Images/Spike/}, {./Images/Ransac/},{./Images/Platform/}}
+\newtagform{defaultoveride}{}{}
+\usetagform{defaultoveride}
 \begin{document}
 \title{Study on various implementations of Extended Kalman Filter based Simultaneous Localization And Mapping}
 \author{Agraj Jain}

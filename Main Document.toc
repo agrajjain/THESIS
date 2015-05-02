@@ -11,30 +11,29 @@
 \contentsline {section}{\numberline {3.1}Overview}{8}
 \contentsline {section}{\numberline {3.2}Mechanical Design}{9}
 \contentsline {section}{\numberline {3.3}Electrical Components}{9}
-\contentsline {section}{\numberline {3.4}Control Diagram}{9}
-\contentsline {section}{\numberline {3.5}Code Structure}{9}
-\contentsline {chapter}{\numberline {IV. }Encoder Based Odometry for State Estimate}{10}
-\contentsline {section}{\numberline {4.1}Overview}{10}
-\contentsline {section}{\numberline {4.2}Motion model and the corresponding differentials}{10}
-\contentsline {section}{\numberline {4.3}Experimental results}{13}
-\contentsline {chapter}{\numberline {V. }Feature Extraction with Point Features}{14}
-\contentsline {section}{\numberline {5.1}Overview}{14}
-\contentsline {section}{\numberline {5.2}Feature Extraction Algorithm}{14}
-\contentsline {section}{\numberline {5.3}Measurement Model and the corresponding Jacobian matrices}{16}
-\contentsline {section}{\numberline {5.4}Experimental results}{17}
-\contentsline {chapter}{\numberline {VI. }RANSAC based linear feature Extraction}{19}
-\contentsline {section}{\numberline {6.1}Overview}{19}
-\contentsline {section}{\numberline {6.2}Feature Extraction Algorithm}{19}
-\contentsline {section}{\numberline {6.3}Measurement Model and the corresponding differentials}{20}
-\contentsline {section}{\numberline {6.4}Experimental results}{23}
-\contentsline {chapter}{\numberline {VII. }Hough transform based linear feature extractor}{24}
-\contentsline {section}{\numberline {7.1}Overview}{24}
-\contentsline {section}{\numberline {7.2}Feature Extraction Algorithm}{24}
-\contentsline {section}{\numberline {7.3}Measurement Model and the corresponding differentials}{24}
-\contentsline {section}{\numberline {7.4}Experimental results}{24}
-\contentsline {chapter}{\numberline {VIII. }Visual odometry}{25}
-\contentsline {section}{\numberline {8.1}Overview}{25}
-\contentsline {section}{\numberline {8.2}Conceptual Description}{25}
-\contentsline {section}{\numberline {8.3}Implementation and integration with EKF SLAM}{25}
-\contentsline {section}{\numberline {8.4}Experimental results}{25}
-\contentsline {chapter}{\numberline {IX. }Conclusion}{26}
+\contentsline {section}{\numberline {3.4}Control Process}{12}
+\contentsline {chapter}{\numberline {IV. }Encoder Based Odometry for State Estimate}{14}
+\contentsline {section}{\numberline {4.1}Overview}{14}
+\contentsline {section}{\numberline {4.2}Motion model and the corresponding differentials}{14}
+\contentsline {section}{\numberline {4.3}Experimental results}{17}
+\contentsline {chapter}{\numberline {V. }Feature Extraction with Point Features}{18}
+\contentsline {section}{\numberline {5.1}Overview}{18}
+\contentsline {section}{\numberline {5.2}Feature Extraction Algorithm}{18}
+\contentsline {section}{\numberline {5.3}Measurement Model and the corresponding Jacobian matrices}{20}
+\contentsline {section}{\numberline {5.4}Experimental results}{21}
+\contentsline {chapter}{\numberline {VI. }RANSAC based linear feature Extraction}{23}
+\contentsline {section}{\numberline {6.1}Overview}{23}
+\contentsline {section}{\numberline {6.2}Feature Extraction Algorithm}{23}
+\contentsline {section}{\numberline {6.3}Measurement Model and the corresponding differentials}{24}
+\contentsline {section}{\numberline {6.4}Experimental results}{27}
+\contentsline {chapter}{\numberline {VII. }Hough transform based linear feature extractor}{28}
+\contentsline {section}{\numberline {7.1}Overview}{28}
+\contentsline {section}{\numberline {7.2}Feature Extraction Algorithm}{28}
+\contentsline {section}{\numberline {7.3}Measurement Model and the corresponding differentials}{28}
+\contentsline {section}{\numberline {7.4}Experimental results}{28}
+\contentsline {chapter}{\numberline {VIII. }Visual odometry}{29}
+\contentsline {section}{\numberline {8.1}Overview}{29}
+\contentsline {section}{\numberline {8.2}Conceptual Description}{29}
+\contentsline {section}{\numberline {8.3}Implementation and integration with EKF SLAM}{29}
+\contentsline {section}{\numberline {8.4}Experimental results}{29}
+\contentsline {chapter}{\numberline {IX. }Conclusion}{30}
