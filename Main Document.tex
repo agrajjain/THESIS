@@ -1,7 +1,17 @@
-\documentstyle[epic,eepic,graphicx,cite,mathtools,caption,subcaption,algorithm,algorithmicx,algpseudocode,longtable]{./styleDocs/poly3}
+\documentstyle[epic,eepic,graphicx,cite,mathtools,caption,subcaption,algorithm,algorithmicx,algpseudocode,longtable,tabu,amssymb,listings,color,afterpage,hyperref]{poly3}
 %\mathindent 0pt
-\input{epsf}
 
+\input{epsf}
+\newtagform{defaultoveride}{}{}
+\usetagform{defaultoveride}
+
+%\hypersetup{
+%    colorlinks,
+%    citecolor=black,
+%    filecolor=black,
+%    linkcolor=black,
+%    urlcolor=black
+%}
 \renewcommand{\baselinestretch}{1.6}
 \newtheorem{theorem}{Theorem}[chapter]
 \newcommand{\btheorem}{\begin{theorem}\rm}
@@ -19,48 +29,50 @@
 \newtheorem{assumption}{Assumption}[chapter]
 \newcommand{\bassump}{\begin{assumption}\rm}
 \newcommand{\eassump}{\end{assumption}}
+
+
 \newcommand{\ekf}{Extended Kalman Filter }
-\newcommand{\slam}{Simultaneous Localization and Mapping }
-\newcommand{\imp}{Integrated Mobile Platform }
-\graphicspath{{./Images/Encoder/}, {./Images/Spike/}, {./Images/Ransac/},{./Images/Platform/}}
-\newtagform{defaultoveride}{}{}
-\usetagform{defaultoveride}
+\newcommand{\slam}{Simultaneous Localization and Mapping}
+\newcommand{\imp}{Integrated Mobile Platform}
+\graphicspath{{./Images/Encoder/}, {./Images/Spike/}, {./Images/Ransac/},{./Images/Platform/},{./Images/Results/},{./Images/slam/}}
+
 \begin{document}
-\title{Study on various implementations of Extended Kalman Filter based Simultaneous Localization And Mapping}
+\title{SIMULTANEOUS LOCALIZATION AND MAPPING ON AN INTEGRATED MOBILE PLATFORM}
 \author{Agraj Jain}
-\committee{ \\ \\ \\ \\ \ \\ \ \\ \ \\Copy Number:}
-%\mstitlepage
+\date{May, 2015}
+\committee{1}
+
+\mstitlepage
+\endmstitlepage 
+
 \topmargin=0.4 in
 \textwidth=6.0 in
 \textheight=9.0 in
-\chapter*{VITA}
-\vitaentry{March 1991}{Born}
-\vitaentry{June 2009}{Graduated High School}
-\vitaentry{May 2013}{Bachelor of Technology in Electrical Engineering}
-\vitaentry{May 2015}{Master of Science in Electrical Engineering \textit{(expected)}}
 \setcounter{page}{1}
 \pagenumbering{roman}
-\include{./Roman/publications}
-\include{./Roman/acknowledgements} 
+\include{./Roman/vita}
+\include{./Roman/acknowledgments}
+\include{./Roman/dedication}
+\include{./Roman/abs}
+
+\normalsize
 \tableofcontents
 \listoffigures
 \listoftables
 \newpage
 \setcounter{page}{1}
 \pagenumbering{arabic}
-\include{./Chapters/Introduction}
-\include{./Chapters/SLAM}
-\include{./Chapters/Platform}
-\include{./Chapters/Encoder}
+%\include{./Chapters/Introduction}
+\include{./Chapters/intro}
+%\include{./Chapters/SLAM}
+\include{./Chapters/slam1}
+%\include{./Chapters/Platform}
+\include{./Chapters/imp}
 \include{./Chapters/Spike}
 \include{./Chapters/Ransac}
-\include{./Chapters/Hough}
-\include{./Chapters/Visual}
-%\include{./Chapters/results} 
+\include{./Chapters/results} 
 \include{./Chapters/Conclusion}
-
+\chapter*{References}
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,bibliography}
-
-%\include{bib}
 \end{document}

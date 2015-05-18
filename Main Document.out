@@ -1,0 +1,48 @@
+\BOOKMARK [0][-]{chapter*.1}{VITA}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{LIST OF FIGURES}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{LIST OF TABLES}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Simultaneous Localization and Mapping}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Environment Sensing}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Thesis Outline}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Overview of Simultaneous Localization and Mapping}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Overview of SLAM}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{Pose Prediction}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{Observation and Landmark Extraction}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.3}{Landmark Prediction and Landmark Association}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.4}{Filter Update}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{Overview of the Extended Kalman Filter}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{Kalman Filter}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.2}{Extended Kalman Filter}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Application of Extended Kalman Filter for SLAM}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Hardware Design and Development of an Integrated Mobile Platform}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Overview and Design Goals}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Mechanical Design}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Electrical Design}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Device purpose and descriptions}{section.3.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Software Design for data collection}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.5}{Encoder Based Odometry for State Estimate}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.5.1}{Motion model and the corresponding differentials}{section.3.5}% 25
+\BOOKMARK [2][-]{subsection.3.5.2}{Limitations of odometry based estimation}{section.3.5}% 26
+\BOOKMARK [0][-]{chapter.4}{2D LIDAR Feature Extraction for SLAM}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Feature Extraction with Point Features}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Overview}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{Feature Extraction Algorithm}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.3}{Examples}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.4}{Measurement Model and the corresponding Jacobian matrices}{section.4.1}% 32
+\BOOKMARK [1][-]{section.4.2}{Feature Extraction with Linear Features}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.2.1}{Overview}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.2}{RANSAC based Feature Extraction Algorithm}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.3}{RANSAC Examples}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.4}{Hough transform based Feature Extraction Algorithm}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.5}{Hough Transform Examples}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.6}{Measurement Model and the corresponding differentials}{section.4.2}% 39
+\BOOKMARK [0][-]{chapter.5}{Implementation and Results}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Implementation of EKF SLAM algorithm}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Experimental Results}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.2.1}{Using Point Features}{section.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.2.2}{Using linear features}{section.5.2}% 44
+\BOOKMARK [2][-]{subsection.5.2.3}{Using a combination of point and linear features}{section.5.2}% 45
+\BOOKMARK [2][-]{subsection.5.2.4}{Uncontrolled environment with linear features}{section.5.2}% 46
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 47
+\BOOKMARK [0][-]{chapter*.40}{References}{}% 48

@@ -14,7 +14,7 @@
 \caption{System diagram of the IMP}
 \label{fig: blockDiag}
 \end{figure}
-The primary purpose of building the \imp or the IMP is to test the various algorithms that are used in SLAM. Since SLAM is mostly used for real time control, it is desirable to have platform with the capabilities to implement that. For this we need to keep the following considerations in mind. 
+The primary purpose of building the \imp or the IMP is to test the various algorithms that are used in SLAM. Since SLAM is mostly used for real time control, it is desirable to have platform with the capabilities to implement that. For this the following considerations act as guidelines.
 \begin{description}
 	\item[Movement] Has to be able to move with a variety of speeds and relatively small turning radii as it is to be used indoors. 
 	\item[Self-position acknowledgment] Has to have proprioceptive sensors which give an estimate of it's own position and orientation.
@@ -57,7 +57,7 @@ The IMP is designed as a six wheel differential drive platform with dimensions a
 \end{figure}
 
 \section{Electrical Components}
-The major Electrical Components on the IMP can be classified under 4 main categories as shown in figure \ref{fig: blockDiag}. Starting with the power we use a Lithium Polymer battery supplying 12V and regulate it on the Power regulation board,component J, to 5V for the Odroid which serves as the on-board computer(Component I on the table \ref{tab: Components}). Since we are using an autopilot board, the Inertial Measurement Unit and the micro-controller are integrated in the same component A in figure \ref{fig:IMPfront}. The other sensors are distributed between the autopilot and the Odroid. The motor driver of choice is the Sabertooth 2x12 as it has a differential command mode in which velocity and omega PWMs are converted to individual motor voltages in hardware. 
+The major Electrical Components on the IMP can be classified under 4 main categories as shown in figure \ref{fig: blockDiag}. Starting with the power block, a Lithium Polymer battery supplying 12V is used and it is regulated on the Power regulation board,component J, to 5V for the Odroid which serves as the on-board computer(Component I on the table \ref{tab: Components}). As an autopilot board is used, the Inertial Measurement Unit and the micro-controller are integrated in the same component A in figure \ref{fig:IMPfront}. The other sensors are distributed between the autopilot and the Odroid. The motor driver of choice is the Sabertooth 2x12 as it has a differential command mode in which velocity and omega PWMs are converted to individual motor voltages in hardware. 
 
 \begin{figure}[h!]
     \centering
@@ -157,4 +157,153 @@ Another major part of the electrical circuits is the communication and informati
 	\item The user commands are sent to the Odroid through the Wi-Fi and are transmitted as is or after interpretation as per the algorithm and the kind of commands being sent. 
 \end{itemize}
 
-%\section{Code Structure} 
+\section{Encoder Based Odometry for State Estimate}
+
+The encoders attached on the two passive wheels give a good estimate of the robot's movement in each time step. The function used to calculate the robot's movement from the encoder data is the motion model of the robot and is used for equation \ref{eq:EKF_1} in section \ref{sec:EKF}. Since this robot has only 3 degrees of freedom, the state vector, $ x \in \Re^3 $ and is defined as $ x = [x,y,\theta]^T $ where $ x $ and $ y $ give the position of the robot from an arbitrary fixed point in inertial frame of reference. 
+
+\section{Motion model and the corresponding differentials}
+
+To estimate the motion model, first left and right wheel movement is converted into distances traveled by them through a linear mapping using the known radius of the wheels. These values are represented by $ u = [ l, r ]^T $. The equations are better implemented as a piecewise function. The two cases of when the robot is estimated to be going straight or to be turning is considered separately. This decision is made by observing the distance traveled by the left and right wheels. If they are exactly the same, the robot is going straight and the motion model is given by equations \ref{eq:Enc_1}. 
+
+If $ r = l $:
+\begin{equation}
+\label{eq:Enc_1}
+	\begin{bmatrix}
+		\hat{x}^-\\\hat{y}^-\\\hat{\theta}^-
+	\end{bmatrix}_k
+	=
+	\begin{bmatrix}
+		\hat{x}\\\hat{y}\\\hat{\theta}
+	\end{bmatrix}_{k-1}
+	+
+	\begin{bmatrix}
+		l.\cos(\hat{\theta}_{k-1})\\
+		l.\sin(\hat{\theta}_{k-1})\\
+		0
+	\end{bmatrix}
+\end{equation}	
+
+If not,equations \ref{eq:Enc_2} and \ref{eq:Enc_3} are used. Where $ R,\alpha $ and $ w $ are as shown in figure \ref{fig:Enc_1}
+			
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth,height=0.3\textheight]{differential_turning}
+\caption{Motion model of Differential drive platform}
+\label{fig:Enc_1}
+\end{figure}
+If $ r \neq l $:
+\begin{equation}
+\label{eq:Enc_2}
+	\alpha= \frac{r-l}{w}
+\qquad
+	R=\frac{l}{\alpha}
+\end{equation}
+\begin{equation}
+\label{eq:Enc_3}
+	\begin{bmatrix}
+		\hat{x}^-\\\hat{y}^-\\\hat{\theta}^-
+	\end{bmatrix}_k
+	=
+	\begin{bmatrix}
+		\hat{x}\\\hat{y}\\\hat{\theta}
+	\end{bmatrix}_{k-1}
+	+
+	\begin{bmatrix}
+		\left(R+\frac{w}{2}\right)(\sin(\hat{\theta}_{k-1}+\alpha)-\sin(\hat{\theta}_{k-1}))\\
+		\left(R+\frac{w}{2}\right)(-\cos(\hat{\theta}_{k-1}+\alpha)-\cos(\hat{\theta}_{k-1}))\\
+		\alpha
+	\end{bmatrix}
+\end{equation}
+
+In general for ease of representation this motion model is referred to only by $ f $. 
+\begin{equation}[h!]
+\label{eq:Enc_4}
+\hat{x}^-_k = f(\hat{x}_{k-1},u_k)
+\end{equation}
+
+Once the motion model is known, it is necessary to find it's Jacobian with respect to the state. Since both the motion model $ f $ and the state have 3 dimensions the Jacobian will be a $ 3\times 3 $ matrix given by \ref{eq:Enc_5}. 
+
+\begin{equation}
+\label{eq:Enc_5}
+A = \frac{\partial f}{\partial x} = 
+\begin{bmatrix}
+\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} & \frac{\partial f_1}{\partial z} \\
+\frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial y} & \frac{\partial f_2}{\partial z} \\
+\frac{\partial f_3}{\partial x} & \frac{\partial f_3}{\partial y} & \frac{\partial f_3}{\partial z}
+\end{bmatrix}
+\end{equation}
+
+Since the motion model is piecewise, it's Jacobian also calculated in two parts by differentiating the respective equations \ref{eq:Enc_1} and \ref{eq:Enc_3}.
+
+If $ r = l $:
+\begin{equation}
+\label{eq:Enc_6}
+A = 
+\begin{bmatrix}
+1 & 0 & -l\sin\theta\\
+0 & 1 & -l\cos\theta\\
+0 & 0 & 1
+\end{bmatrix}
+\end{equation}
+
+If $ r \neq l $
+\begin{equation}
+\label{eq:Enc_7}
+A = 
+\begin{bmatrix}
+1 & 0 & (R+\frac{w}{2})(\cos(\theta+\alpha)-\cos\theta)\\
+0 & 1 & (R+\frac{w}{2})(\sin(\theta+\alpha)-\sin\theta)\\
+0 & 0 & 1
+\end{bmatrix}
+\end{equation}
+
+Where $ R,w $ and $ \alpha $ are according to equation \ref{eq:Enc_2} and figure \ref{fig:Enc_1}
+
+Next the motion model is differentiated with respect to the noise. Here the process noise is assumed to be essentially due to the noise in encoder measurement and it is additive in nature. Hence it is possible to know the variance of the movement with respect to noise by differentiating the motion model with respect to the encoder measurements $ l $ and $ r $. Since this is of dimension 2, the noise covariance matrix W will be of dimension $ 3\times 2 $ given by equation \ref{eq:Enc_8}.
+
+\begin{equation}
+\label{eq:Enc_8}
+W = \frac{\partial f}{\partial (u+w)} = \frac{\partial f}{\partial (u)} =
+\begin{bmatrix}
+\frac{\partial f_1}{\partial l} & \frac{\partial f_1}{\partial r}\\
+\frac{\partial f_2}{\partial l} & \frac{\partial f_2}{\partial r}\\
+\frac{\partial f_3}{\partial l} & \frac{\partial f_3}{\partial r}
+\end{bmatrix} 
+\end{equation}
+Each of the individual terms are then calculated independently.
+\begin{subequations}
+If $ r=l $:
+	\begin{align}
+		\frac{\partial f_1}{\partial l} &= \frac{1}{2}(\cos\theta+\frac{l}{w}\sin\theta)\\
+		\frac{\partial f_2}{\partial l} &= \frac{1}{2}(\sin\theta-\frac{l}{w}\cos\theta)\\
+		\frac{\partial f_1}{\partial r} &= \frac{1}{2}(-\frac{l}{w}\sin\theta+\cos\theta)\\
+		\frac{\partial f_2}{\partial r} &= \frac{1}{2}(\frac{l}{w}\cos\theta+\sin\theta)\\
+		\frac{\partial f_3}{\partial l} &= -\frac{1}{w} \quad \frac{\partial f_3}{\partial r} = \frac{1}{w}
+	\end{align}
+\end{subequations}
+
+\begin{subequations}
+If $ r\neq l $:
+	\begin{align}
+		\frac{\partial f_1}{\partial l} &= \frac{wr}{(r-l)^2}(\sin\theta'-\sin\theta)-\frac{r+l}{2(r-l)}\cos\theta'\\
+		\frac{\partial f_2}{\partial l} &= \frac{wr}{(r-l)^2}(-\cos\theta'+\cos\theta)-\frac{r+l}{2(r-l)}\sin\theta'\\
+		\frac{\partial f_1}{\partial r} &= \frac{-wr}{(r-l)^2}(\sin\theta'-\sin\theta)+\frac{r+l}{2(r-l)}\cos\theta'\\
+		\frac{\partial f_2}{\partial r} &= \frac{wr}{(r-l)^2}(-\cos\theta'+\cos\theta)-\frac{r+l}{2(r-l)}\sin\theta'\\
+		\frac{\partial f_3}{\partial l} &= -\frac{1}{w} \quad \frac{\partial f_3}{\partial r} = \frac{1}{w}
+	\end{align}
+\end{subequations}
+
+Where, $ \theta'=\theta+\alpha $ and $ R,w $ and $ \alpha $ are as per figure \ref{fig:Enc_1}. Once the Jacobian is calculated, the last component needed for the estimation according to equation \ref{eq:EKF_4} is the Process noise covariance $ Q $. This has to contain some information about the amount the noise in each time step. Since all noise is assumed to be only sensor measurement noise, a diagonal matrix with the error in each encoder is chosen as the covariance as in equation \ref{eq:Enc_9}.
+
+\begin{equation}
+\label{eq:Enc_9}
+Q = 
+\begin{bmatrix}
+\sigma_l^2 & 0\\
+0 & \sigma_r^2
+\end{bmatrix}
+\end{equation}
+
+\subsection{Limitations of odometry based estimation}
+
+One of the primary limitation of estimating a robot's position solely on odometry is that, over a long time, the error accumulates and result in the estimate being very far from the actual position of the robot. Other than this primary drawback, there are additional drawbacks. Every real world encoder has a component of noise which accumulates over time. Also there is a good chance of wheel slippage especially during turns making it hard to accurately reconstruct a turn. Another drawback is that if the encoder wheels are not fully lubricated and free to move, any wheel might stop moving with the robot and skid instead. This will result in a turn like reconstruction.

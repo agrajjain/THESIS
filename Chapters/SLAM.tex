@@ -1,148 +1,148 @@
-\chapter{Overview of \ekf based Simultaneous Localization and Mapping}
-\label{cha:Overview}
-\section{Overview of SLAM}
-\label{sec:SLAM_parts}
-Simultaneous Localization and Mapping, commonly abbreviated as SLAM, is concerned with the problem of a mobile robot building a map of the unknown environment, while at the same time navigating the environment using the map. Slam consists of multiple parts. To give a broad overview, the important parts of SLAM are: 
-	\begin{itemize}
-		\item \textbf{State Estimation:} Proprioceptive sensors are used to estimate where the robot might be in the map.
-		\item \textbf{Landmark Extraction:} Use exteroceptive sensors on the robot to detect prominent features of the environment. These can either be generalized features or specific landmarks about which we have prior information 
-		\item \textbf{Data Association:} The landmarks or features detected in the previous step is associated with existing features in the map that has been generated till now.  
-		\item \textbf{State Update:} The position of the robot is corrected based on the deviations of the features with the features on the existing map. 
-		\item \textbf{Landmark Update:} The positions on the features are also corrected based on the correction in the position of the robot. 
-	\end{itemize}
+% \chapter{Overview of \ekf based Simultaneous Localization and Mapping}
+% \label{cha:Overview}
+% \section{Overview of SLAM}
+% \label{sec:SLAM_parts}
+% Simultaneous Localization and Mapping, commonly abbreviated as SLAM, is concerned with the problem of a mobile robot building a map of the unknown environment, while at the same time navigating the environment using the map. Slam consists of multiple parts. To give a broad overview, the important parts of SLAM are: 
+% 	\begin{itemize}
+% 		\item \textbf{State Estimation:} Proprioceptive sensors are used to estimate where the robot might be in the map.
+% 		\item \textbf{Landmark Extraction:} Use exteroceptive sensors on the robot to detect prominent features of the environment. These can either be generalized features or specific landmarks about which prior information is available.
+% 		\item \textbf{Data Association:} The landmarks or features detected in the previous step is associated with existing features in the map that has been generated till now.  
+% 		\item \textbf{State Update:} The position of the robot is corrected based on the deviations of the features with the features on the existing map. 
+% 		\item \textbf{Landmark Update:} The positions on the features are also corrected based on the correction in the position of the robot. 
+% 	\end{itemize}
 
-While there are many algorithms for SLAM most contain these basic steps in some form or the other. There are also many ways to solve each of the smaller parts. The purpose of each part is better understood having an understanding of the Extended Kalman Filter. 
+% While there are many algorithms for SLAM most contain these basic steps in some form or the other. There are also many ways to solve each of the smaller parts. The purpose of each part is better understood having an understanding of the Extended Kalman Filter. 
 
-\section{Kalman Filter}
-\label{sec:KalmanFilter}
-The popular Kalman Filter \cite{Kalman1960, WelchandBishop1995} is a consists of mathematical equations that give an efficient computational recursive solution of the least squares problem. The filter has several advantages such as: it supports estimation of the past, present and future states, even when the precise nature of the system is not known.
+% \section{Kalman Filter}
+% \label{sec:KalmanFilter}
+% The popular Kalman Filter \cite{Kalman1960, WelchandBishop1995} is a consists of mathematical equations that give an efficient computational recursive solution of the least squares problem. The filter has several advantages such as: it supports estimation of the past, present and future states, even when the precise nature of the system is not known.
 
-In general it addresses the problem of trying to estimate the state $ x \in \Re^n $ of a discrete time process described by the linear stochastic equation
+% In general it addresses the problem of trying to estimate the state $ x \in \Re^n $ of a discrete time process described by the linear stochastic equation
 
-\begin{equation}[h]
-\label{eq:Kal_1}
-x_k = Ax_{k-1} + Bu_k + w_{k-1}
-\end{equation}
+% \begin{equation}[h]
+% \label{eq:Kal_1}
+% x_k = Ax_{k-1} + Bu_k + w_{k-1}
+% \end{equation}
 
-with a measurement $ z_k \in \Re^m $ which is given by,
-\begin{equation}[h]
-\label{eq:Kal_2}
-z_k=Hx_k+v_k
-\end{equation}
+% with a measurement $ z_k \in \Re^m $ which is given by,
+% \begin{equation}[h]
+% \label{eq:Kal_2}
+% z_k=Hx_k+v_k
+% \end{equation}
 
-The random variables $ w_k and v_k$ represent the process and measurement noise respectively. They are assumed to be independent of each other and have a normal probability distribution functions given by equations \ref{eq:Kal_3} and \ref{eq:Kal_4}
-\begin{equation}
-\label{eq:Kal_3}
-p(w)\approx N(0,Q),
-\end{equation} 
-\begin{equation}
-\label{eq:Kal_4}
-p(v) \approx N(0,R)
-\end{equation}
+% The random variables $ w_k and v_k$ represent the process and measurement noise respectively. They are assumed to be independent of each other and have a normal probability distribution functions given by equations \ref{eq:Kal_3} and \ref{eq:Kal_4}
+% \begin{equation}
+% \label{eq:Kal_3}
+% p(w)\approx N(0,Q),
+% \end{equation} 
+% \begin{equation}
+% \label{eq:Kal_4}
+% p(v) \approx N(0,R)
+% \end{equation}
 
-In practice, the process and measurement noise covariances, Q and R matrices might change at every time step. As might the matrices A and H. They are assumed constants for now. 
+% In practice, the process and measurement noise covariances, Q and R matrices might change at every time step. As might the matrices A and H. They are assumed constants for now. 
 
-The equations of Kalman filter can be seen as to be in 2 groups. \textit{Prediction} equations and \textit{Correction} equations. The former are responsible for projecting forward in time the current state and error probabilities and the latter are responsible for adjusting the projected estimate by an actual measurement at that time. Hence the Kalman filter estimates a process by a form of feedback control. 
+% The equations of Kalman filter can be seen as to be in 2 groups. \textit{Prediction} equations and \textit{Correction} equations. The former are responsible for projecting forward in time the current state and error probabilities and the latter are responsible for adjusting the projected estimate by an actual measurement at that time. Hence the Kalman filter estimates a process by a form of feedback control. 
 
-Defining the predicted state estimate as $ \hat{x}^-_k \in \Re^n $ and the corrected estimate to be $ \hat{x}_k \in \Re^n $ the actual equations for the prediction are given by \ref{eq:Kal_5} and \ref{eq:Kal_6} where A and B are from equation \ref{eq:Kal_1} and Q is from equation \ref{eq:Kal_3} \cite{WelchandBishop1995}.
-\begin{equation}
-\label{eq:Kal_5}
-\hat{x}^-_k = A\hat{x}_{k-1}+Bu_k
-\end{equation}
-\begin{equation}
-\label{eq:Kal_6}
-P^-_k = AP_{k-1}A^T+Q
-\end{equation}
+% Defining the predicted state estimate as $ \hat{x}^-_k \in \Re^n $ and the corrected estimate to be $ \hat{x}_k \in \Re^n $ the actual equations for the prediction are given by \ref{eq:Kal_5} and \ref{eq:Kal_6} where A and B are from equation \ref{eq:Kal_1} and Q is from equation \ref{eq:Kal_3} \cite{WelchandBishop1995}.
+% \begin{equation}
+% \label{eq:Kal_5}
+% \hat{x}^-_k = A\hat{x}_{k-1}+Bu_k
+% \end{equation}
+% \begin{equation}
+% \label{eq:Kal_6}
+% P^-_k = AP_{k-1}A^T+Q
+% \end{equation}
 
-The first step in the correction step is to find a \textit{gain} or \textit{blending factor} that minimizes the error covariance. This is found by equation \ref{eq:Kal_7} \cite{Kalman1960,Maybeck1979,Jacobs1993,Brown2012}. 
-The next step is to actually measure the process to get $ z_k $ and generate a better estimate using equations \ref{eq:Kal_8} and \ref{eq:Kal_9} \cite{WelchandBishop1995}.
+% The first step in the correction step is to find a \textit{gain} or \textit{blending factor} that minimizes the error covariance. This is found by equation \ref{eq:Kal_7} \cite{Kalman1960,Maybeck1979,Jacobs1993,Brown2012}. 
+% The next step is to actually measure the process to get $ z_k $ and generate a better estimate using equations \ref{eq:Kal_8} and \ref{eq:Kal_9} \cite{WelchandBishop1995}.
 
-\begin{equation}
-\label{eq:Kal_7}
-K_k = P^-_kH^T(HP^-_kH^T+R)^{-1}
-\end{equation}
-\begin{equation}
-\label{eq:Kal_8}
-\hat{x}_k = \hat{x}^-_k+K_k(z_k-H\hat{x}^-_k)
-\end{equation}
-\begin{equation}
-\label{eq:Kal_9}
-P_k = (I-K_kH)P^-_k
-\end{equation} 
+% \begin{equation}
+% \label{eq:Kal_7}
+% K_k = P^-_kH^T(HP^-_kH^T+R)^{-1}
+% \end{equation}
+% \begin{equation}
+% \label{eq:Kal_8}
+% \hat{x}_k = \hat{x}^-_k+K_k(z_k-H\hat{x}^-_k)
+% \end{equation}
+% \begin{equation}
+% \label{eq:Kal_9}
+% P_k = (I-K_kH)P^-_k
+% \end{equation} 
 
-After each prediction and correction step, the corrected measurement found out is used as an initial estimate for the prediction step of the next time step. This recursive nature is one of the most appealing feature of Kalman filters. 
+% After each prediction and correction step, the corrected measurement found out is used as an initial estimate for the prediction step of the next time step. This recursive nature is one of the most appealing feature of Kalman filters. 
 
-\section{Extended Kalman Filter}
-\label{sec:EKF}
- In the previous section \ref{sec:KalmanFilter}, the Kalman filter gives us a set of equations to estimate the state $ x \in \Re^n $ of a discrete time process described by a set of \textit{linear} equations. But, most applications including SLAM, consists of systems governed by \textit{non-linear} equations. The Extended Kalman filter is the technique of linearizing a non-linear dynamics around the current mean and covariance for use in a Kalman filter.
+% \section{Extended Kalman Filter}
+% \label{sec:EKF}
+%  In the previous section \ref{sec:KalmanFilter}, the Kalman filter gives us a set of equations to estimate the state $ x \in \Re^n $ of a discrete time process described by a set of \textit{linear} equations. But, most applications including SLAM, consists of systems governed by \textit{non-linear} equations. The Extended Kalman filter is the technique of linearizing a non-linear dynamics around the current mean and covariance for use in a Kalman filter.
  
- Similar to the Taylor series, we can linearize the estimation around the current estimate using the partial derivatives of the process and measurement functions. To do this we slightly modify the equations in section \ref{sec:KalmanFilter}. We again start with the assumption that the process has a state vector $ x \in \Re^n $, but it is described a \textit{non-linear} stochastic difference equation \ref{eq:EKF_1}. This equation relates the state at time step $ x_{k-1}$  and  $x_k $. The measurement $ z \in \Re^m $ is given by equation \ref{eq:EKF_2} where h is also \textit{non-linear}.
- \begin{equation}
- \label{eq:EKF_1}
- x_k = f(x_{k-1},u_k,w_{k-1})
- \end{equation}
- \begin{equation}
- \label{eq:EKF_2}
- z_k = h(x_k,v_k)
- \end{equation}
+%  Similar to the Taylor series, the estimation around the current estimate can be linearized using the partial derivatives of the process and measurement functions. To do this the equations in section \ref{sec:KalmanFilter} are slightly modified. The initial assumption is still that the process has a state vector $ x \in \Re^n $, but it is described a \textit{non-linear} stochastic difference equation \ref{eq:EKF_1}. This equation relates the state at time step $ x_{k-1}$  and  $x_k $. The measurement $ z \in \Re^m $ is given by equation \ref{eq:EKF_2} where h is also \textit{non-linear}.
+%  \begin{equation}
+%  \label{eq:EKF_1}
+%  x_k = f(x_{k-1},u_k,w_{k-1})
+%  \end{equation}
+%  \begin{equation}
+%  \label{eq:EKF_2}
+%  z_k = h(x_k,v_k)
+%  \end{equation}
 
-Here, the random variables $ w_k$  and  $v_k $ are again the process and measurement noise as in equations \ref{eq:Kal_3} ans \ref{eq:Kal_4}. Similar to the section \ref{sec:KalmanFilter}, we have 2 groups of equations. The prediction step is given by equations \ref{eq:EKF_3} and \ref{eq:EKF_4}.
-\begin{equation}
- \label{eq:EKF_3}
- \hat{x}^-_k = f(\hat{x}_{k-1},u_k,0)
-\end{equation}
-\begin{equation}
- \label{eq:EKF_4}
- P^-_k = A_kP_{k-1}A_k^T + W_kQ_{k-1}W^T_k
-\end{equation}
+% Here, the random variables $ w_k$  and  $v_k $ are again the process and measurement noise as in equations \ref{eq:Kal_3} ans \ref{eq:Kal_4}. Similar to the section \ref{sec:KalmanFilter}, there are 2 groups of equations. The prediction step is given by equations \ref{eq:EKF_3} and \ref{eq:EKF_4}.
+% \begin{equation}
+%  \label{eq:EKF_3}
+%  \hat{x}^-_k = f(\hat{x}_{k-1},u_k,0)
+% \end{equation}
+% \begin{equation}
+%  \label{eq:EKF_4}
+%  P^-_k = A_kP_{k-1}A_k^T + W_kQ_{k-1}W^T_k
+% \end{equation}
 
-Here we can see the first equation is the same as \ref{eq:EKF_1}, but the $ w_k $ variable is replaced by zero as in practice we don ot actually know the noise and $ \hat{x}^-_k $ is just an estimate. The second equation is similar to the Kalman filter equations except here A and W are Jacobian matrices of partial derivatives with respect to x and w respectively. At each time step they are recalculated according to equations \ref{eq:EKF_5} and \ref{eq:EKF_6}
+% Here it is seen that the first equation is the same as \ref{eq:EKF_1}, but the $ w_k $ variable is replaced by zero as in practice it is not possible to actually know the noise and $ \hat{x}^-_k $ is just an estimate. The second equation is similar to the Kalman filter equations except here A and W are Jacobian matrices of partial derivatives with respect to x and w respectively. At each time step they are recalculated according to equations \ref{eq:EKF_5} and \ref{eq:EKF_6}
 
-\begin{equation}
-\label{eq:EKF_5}
-A_{[i,j]} = \frac{\partial f_{[i]}}{\partial x_{[j]}} (\hat{x}_{k-1},u_k,0)
-\end{equation}
+% \begin{equation}
+% \label{eq:EKF_5}
+% A_{[i,j]} = \frac{\partial f_{[i]}}{\partial x_{[j]}} (\hat{x}_{k-1},u_k,0)
+% \end{equation}
 
-\begin{equation}
-\label{eq:EKF_6}
-W_{[i,j]} = \frac{\partial f_{[i]}}{\partial w_{[j]}} (\hat{x}_{k-1},u_k,0)
-\end{equation}
+% \begin{equation}
+% \label{eq:EKF_6}
+% W_{[i,j]} = \frac{\partial f_{[i]}}{\partial w_{[j]}} (\hat{x}_{k-1},u_k,0)
+% \end{equation}
 
-As with the basic Kalman filter ,the equations for the correction step given by \ref{eq:EKF_7} to \ref{eq:EKF_9} correct the estimate of the state and covariance based on a measurement $ z $ at time $ k $
+% As with the basic Kalman filter ,the equations for the correction step given by \ref{eq:EKF_7} to \ref{eq:EKF_9} correct the estimate of the state and covariance based on a measurement $ z $ at time $ k $
 
-\begin{equation}
-\label{eq:EKF_7}
-K_k = P^-_kH^T_k(_kHP^-_kH^T_k+V_kRV^T_k)^{-1}
-\end{equation}
-\begin{equation}
-\label{eq:EKF_8}
-\hat{x}_k = \hat{x}^-_k+K_k(z_k-h(\hat{x}^-_k,0))
-\end{equation}
-\begin{equation}
-\label{eq:EKF_9}
-P_k = (I-K_kH_k)P^-_k
-\end{equation} 
+% \begin{equation}
+% \label{eq:EKF_7}
+% K_k = P^-_kH^T_k(_kHP^-_kH^T_k+V_kRV^T_k)^{-1}
+% \end{equation}
+% \begin{equation}
+% \label{eq:EKF_8}
+% \hat{x}_k = \hat{x}^-_k+K_k(z_k-h(\hat{x}^-_k,0))
+% \end{equation}
+% \begin{equation}
+% \label{eq:EKF_9}
+% P_k = (I-K_kH_k)P^-_k
+% \end{equation} 
 
-As in the previous case, h is from equation \ref{eq:EKF_2} and $ v_k $ is approximated to zero for finding an estimate of state. In the \textit{Kalman gain} and covariance equations, H and V are again Jacobian matrices of the partial of h with respect to x and v respectively. They are also recalculated each step using equations \ref{eq:EKF_10} and \ref{eq:EKF_11}
+% As in the previous case, h is from equation \ref{eq:EKF_2} and $ v_k $ is approximated to zero for finding an estimate of state. In the \textit{Kalman gain} and covariance equations, H and V are again Jacobian matrices of the partial of h with respect to x and v respectively. They are also recalculated each step using equations \ref{eq:EKF_10} and \ref{eq:EKF_11}
 
-\begin{equation}
-\label{eq:EKF_10}
-H_{[i,j]} = \frac{\partial h_{[i]}}{\partial x_{[j]}} (\hat{x}_{k-1},u_k,0)
-\end{equation}
+% \begin{equation}
+% \label{eq:EKF_10}
+% H_{[i,j]} = \frac{\partial h_{[i]}}{\partial x_{[j]}} (\hat{x}_{k-1},u_k,0)
+% \end{equation}
 
-\begin{equation}
-\label{eq:EKF_11}
-V_{[i,j]} = \frac{\partial h_{[i]}}{\partial v_{[j]}} (\hat{x}_{k-1},u_k,0)
-\end{equation}
+% \begin{equation}
+% \label{eq:EKF_11}
+% V_{[i,j]} = \frac{\partial h_{[i]}}{\partial v_{[j]}} (\hat{x}_{k-1},u_k,0)
+% \end{equation}
 
-\section{Application of Extended Kalman Filter for SLAM}
-\label{sec:EKF_SLAM}
-In the case of Simultaneous Localization and Mapping, the state we are trying to estimate is a combination of the position of the robot as well as the environment. The variable $ x $ can be assumed as a vector of the robot's pose and the position of various features in the environment that we are interested in. These may be explicitly defined features or generic in nature. The error in our knowledge of the robot pose and our knowledge of the environment is represented by the covariance $ P $. 
+% \section{Application of Extended Kalman Filter for SLAM}
+% \label{sec:EKF_SLAM}
+% In the case of Simultaneous Localization and Mapping, the state to be estimated is a combination of the position of the robot as well as the environment. The variable $ x $ can be assumed as a vector of the robot's pose and the position of various features in the environment that are useful for reconstruction. These may be explicitly defined features or generic in nature. The error in the estimate of the robot pose and the environment is represented by the covariance $ P $.
 
-Of the subparts mentioned in section \ref{sec:SLAM_parts}, it is now apparent that the \textit{State Estimation} step involves the \textit{Prediction} step of the \ekf. The function $ f $ from equation \ref{eq:EKF_1} is our system model. It typically involves the motion model of the robot. It is a function that gives us an estimate of the it's pose. As for the input $ u_k $, it can take any information about the motion that it undergoes in time step $ k $. It can be the commands given to the robot or , more commonly, the measurements of the proprioceptive sensors such as encoders. This motion model is differentiated with respect to both itself and the noise model to get the Jacobian matrices used in equation \ref{eq:EKF_4}. The specific motion and noise models used will be discussed in further chapters.
+% Of the subparts mentioned in section \ref{sec:SLAM_parts}, it is now apparent that the \textit{State Estimation} step involves the \textit{Prediction} step of the \ekf. The function $ f $ from equation \ref{eq:EKF_1} is the system model. It typically involves the motion model of the robot. It is a function that gives an estimate of it's pose. As for the input $ u_k $, it can take any information about the motion that it undergoes in time step $ k $. It can be the commands given to the robot or , more commonly, the measurements of the proprioceptive sensors such as encoders. This motion model is differentiated with respect to both itself and the noise model to get the Jacobian matrices used in equation \ref{eq:EKF_4}. The specific motion and noise models used will be discussed in further chapters.
 
-Now that we have an estimate of the robot pose at time $ k $, we need to improve upon it. For this we need a measurement of the environment using any exteroceptive sensor on the robot. This measurement is got in the \textit{Landmark Extraction} step. A wide variety of sensors can be used such as a laser range finders and cameras depending on both the environment and the robot. Whatever sensor is used, the feature or landmark which is to be used as measurement is extracted and it's relation to the pose of the robot is represented by a measurement model. This model forms the function $ h $ from equation \ref{eq:EKF_2}. Differentiating this with respect to the robot pose we get a part of the $ H $ matrix. 
+% Now that an estimate of the robot pose at time $ k $ is available, it needs to be improved. For this a measurement of the environment using any exteroceptive sensor on the robot is used. This measurement is got in the \textit{Landmark Extraction} step. A wide variety of sensors can be used such as a laser range finders and cameras depending on both the environment and the robot. Whatever sensor is used, the feature or landmark which is to be used as measurement is extracted and it's relation to the pose of the robot is represented by a measurement model. This model forms the function $ h $ from equation \ref{eq:EKF_2}. This is differentiated with respect to the robot pose to get a part of the $ H $ matrix.
 
-For the rest of the Jacobian we need to differentiate it with respect to the rest of the state vector which contains some representation of the environment already observed by the robot. Also to successively calculate the difference $ z_k-h(\hat{x}^-_k,0) $ from equation \ref{eq:EKF_8}, commonly called the \textit{innovation}, we need to know which measurement corresponds to which feature in the observed environment. This is the essence of the \textit{Data Association} step. A number of methods such as Euclidean or Mahalanobis\cite{Mahalanobis1936} distance are commonly used. 
+% For the rest of the Jacobian the measurement model is differentiated with respect to the rest of the state vector which contains some representation of the environment already observed by the robot. Also to successively calculate the difference $ z_k-h(\hat{x}^-_k,0) $ from equation \ref{eq:EKF_8}, commonly called the \textit{innovation}, it is necessary to know which measurement corresponds to which feature in the observed environment. This is the essence of the \textit{Data Association} step. A number of methods such as Euclidean or Mahalanobis\cite{Mahalanobis1936} distance are commonly used. 
 
-Once we have the innovation, both the robot pose and the environment is updated simultaneously using equations \ref{eq:EKF_7} to \ref{eq:EKF_9}.
+% Once the innovation is calculated, both the robot pose and the environment is updated simultaneously using equations \ref{eq:EKF_7} to \ref{eq:EKF_9}.

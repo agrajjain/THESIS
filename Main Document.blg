@@ -1,17 +1,30 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Main Document.aux
-A level-1 auxiliary file: ./Roman/publications.aux
-A level-1 auxiliary file: ./Roman/acknowledgements.aux
-A level-1 auxiliary file: ./Roman/abstract.aux
-A level-1 auxiliary file: ./Chapters/Introduction.aux
-A level-1 auxiliary file: ./Chapters/SLAM.aux
-A level-1 auxiliary file: ./Chapters/Platform.aux
-A level-1 auxiliary file: ./Chapters/Improvements.aux
+A level-1 auxiliary file: ./Roman/vita.aux
+A level-1 auxiliary file: ./Roman/acknowledgments.aux
+A level-1 auxiliary file: ./Roman/dedication.aux
+A level-1 auxiliary file: ./Roman/abs.aux
+A level-1 auxiliary file: ./Chapters/intro.aux
+A level-1 auxiliary file: ./Chapters/slam1.aux
+A level-1 auxiliary file: ./Chapters/imp.aux
+A level-1 auxiliary file: ./Chapters/Spike.aux
+A level-1 auxiliary file: ./Chapters/Ransac.aux
 A level-1 auxiliary file: ./Chapters/results.aux
 A level-1 auxiliary file: ./Chapters/Conclusion.aux
 The style file: IEEEtran.bst
 Database file #1: IEEEabrv.bib
 Database file #2: bibliography.bib
-Warning--I didn't find a database entry for ""
+Repeated entry---line 614 of file bibliography.bib
+ : @inproceedings{icp1
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 625 of file bibliography.bib
+ : @inproceedings{icp1
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 635 of file bibliography.bib
+ : @inproceedings{icp1
+ :                    ,
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -19,4 +32,4 @@ Warning--missing institution in WelchandBishop1995
 Warning--empty author and editor in Maybeck1979
 
 Done.
-(There were 3 warnings)
+(There were 3 error messages)

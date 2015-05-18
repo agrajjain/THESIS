@@ -1,0 +1,53 @@
+\chapter{Implementation and Results}
+\label{cha:results}
+
+\section{Python Implementation of EKF SLAM algorithm}
+
+The SLAM algorithm, as discussed in chapter \ref{cha:Overview} consists of subparts each of which presents challenges of their own. The primary purpose of this thesis being to try out different algorithms for the subparts, the guiding principle of the implementation becomes modularity. Hence an object oriented language such as python is the platform of choice. This allows us to create individual objects for each part of the algorithm which can be substituted with ease. 
+
+The major classes used to implement the \ekf SLAM are:
+\begin{itemize}
+	\item \textbf{Log\_Manager:} The parser class. It is responsible for correctly reading in the data stored in the log files and creating python dictionaries for each kind of data it reads.\\
+	Member Variables: 
+	\begin{itemize}
+		\item timeStamps: A list of time stamps read from the log file
+		\item motorTicks: A dictionary which associates a tuple with each time stamp contained in timeStamps. The tuple contains the difference between previous value of the encoder accumulator and the current value for each of the encoders. 
+		\item scanDistances: A dictionary that associates a list of range readings from the LIDAR to each time stamp. The LIDAR data itself is read from the log file.
+		\item scanAngles: Dictionary containing the list of angles corresponding to the scanDistances for each time step.
+	\end{itemize}
+	Member Methods:
+	\begin{itemize}
+		\item read(filename): Takes in log file, parses it and populates all the member variables. Calling this multiple times with different files will result in a merge of the data. 
+		\item get\_data(dataType): A getter function through which the member variables can be accessed everywhere else in the program. It returns the value at the current time corresponding to the dataType argument.
+	\end{itemize}
+	\item \textbf{Extended\_Kalman\_Filter}: The class that does the actual EKF calculations. \\
+	Member Variables:
+	\begin{itemize}
+		\item map: A list of objects that are already known to be in the arena. It can contain both the robot and landmark objects.
+		\item state: A 1D numpy array representing the state of the system used for EKF. Contains all robot and landmark positions.
+		\item covariance: a 2D numpy array representing the noise covariance for each value in the state. 
+		\item numberOfRobots: A counter containing the number of robots in the map in case any function outside the class needs to know.
+		\item numberOfLandmarks: A counter similar to numberOfRobots containing a count of landmarks already seen. 
+	\end{itemize}
+	Member Methods:
+	\begin{itemize}
+		\item add\_to\_map(newObject): Adds any given object to the map and modifies the index members of the object
+		\item run(): This is the Main loop of the Kalman filter and will be discussed in detail later on. Overall when called at each time step, it calculates the new state based on all the information it can get. It performs all the steps from prediction to correction. It then updates the map by modifying each object in the map as per the newly calculated state.
+	\end{itemize}
+	\item \textbf{Robot:} A class to represent each robot in the arena.\\
+	Member Variables:
+	\begin{itemize}
+		\item position: 1D array containing the current position of the robot. Length of the array is determined by the type of robot.
+		\item covariance: 2D array containing the estimated noise in the position values. 
+		\item dimension: Holds the length of the position array or the number of variables required to completely define it's position in the world
+		\item mapIndex: Holds the index at which the specific robot object is present in the map maintained by \ekf class.
+		\item stateIndex: Holds the starting index if it's own position in the state vector of EKF class.
+		\item pSensors: List of proprioceptive sensor objects attached to the robot. 
+		\item eSensors: List of exteroceptive sensor objects which are associated with the robot. 
+	\end{itemize}
+	Member Methods: 
+	\begin{itemize}
+		\item predict\_self: A generic function that calls the update method of each of it's proprioceptive sensors. The data can then be merged in this function to finish the prediction step of the \ekf. It returns new position and error to be used for further steps. 
+		\item observe: 
+	\end{itemize}
+\end{itemize}

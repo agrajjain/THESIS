@@ -1,31 +1,51 @@
 \relax 
-\citation{}
-\citation{}
-\citation{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {VI. }RANSAC based linear feature Extraction}{23}}
-\@writefile{lof}{\addvspace {10pt}}
-\@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Overview}{23}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Feature Extraction Algorithm}{23}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Multiple line fitting with RANSAC\relax }}{24}}
-\newlabel{alg: RANSAC algorithm}{{1}{24}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Measurement Model and the corresponding differentials}{24}}
-\newlabel{sec:Ransac_math}{{6.3}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Normal form of a line\relax }}{25}}
-\newlabel{fig: normal_form}{{9}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Line in robot frame and world frame.\relax }}{25}}
-\newlabel{fig: wall_to_world}{{10}{25}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces To convert linear features from robot frame to inertial frame\relax }}{26}}
-\newlabel{alg: wall_to_world}{{2}{26}}
-\newlabel{eq:lineModel1}{{(6.1)}{26}}
-\newlabel{eq:lineModel2}{{(6.2)}{26}}
-\newlabel{eq:lineModel3}{{(6.3)}{26}}
-\newlabel{eq:lineModel5}{{(6.4)}{26}}
-\newlabel{eq:lineModel6}{{(6.5)}{27}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experimental results}{27}}
+\providecommand\hyper@newdestlabel[2]{}
+\citation{Nguyen2005}
+\citation{riisgaard2003slam}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Feature Extraction with Linear Features}{33}{section.4.2}}
+\newlabel{sec:extraction}{{4.2}{33}{Feature Extraction with Linear Features}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Overview}{33}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}RANSAC based Feature Extraction Algorithm}{33}{subsection.4.2.2}}
+\newlabel{sec:ransac}{{4.2.2}{33}{RANSAC based Feature Extraction Algorithm}{subsection.4.2.2}{}}
+\citation{Stockman2001}
+\citation{Duda1972}
+\citation{Hu1998}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Multiple line fitting with RANSAC.\relax }}{34}{algorithm.1}}
+\newlabel{alg: RANSAC algorithm}{{1}{34}{Multiple line fitting with RANSAC.\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}RANSAC Examples}{34}{subsection.4.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Example of walls detected by RANSAC.\relax }}{35}{figure.caption.22}}
+\newlabel{fig: ransac_good}{{13}{35}{Example of walls detected by RANSAC.\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Example of spurious walls marked by RANSAC.\relax }}{35}{figure.caption.23}}
+\newlabel{fig: ransac_bad}{{14}{35}{Example of spurious walls marked by RANSAC.\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Hough transform based Feature Extraction Algorithm}{35}{subsection.4.2.4}}
+\newlabel{sec:hough}{{4.2.4}{35}{Hough transform based Feature Extraction Algorithm}{subsection.4.2.4}{}}
+\newlabel{eq:hough1}{{(4.6)}{36}{Hough transform based Feature Extraction Algorithm}{equation.4.2.6}{}}
+\newlabel{eq:hough2}{{(4.7)}{36}{Hough transform based Feature Extraction Algorithm}{equation.4.2.7}{}}
+\newlabel{eq:hough3}{{(4.8)}{36}{Hough transform based Feature Extraction Algorithm}{equation.4.2.8}{}}
+\newlabel{eq:hough4}{{(4.9)}{37}{Hough transform based Feature Extraction Algorithm}{equation.4.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Hough Transform Examples}{37}{subsection.4.2.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Example of walls detected by Hough Transform.\relax }}{38}{figure.caption.24}}
+\newlabel{fig: hough1}{{15}{38}{Example of walls detected by Hough Transform.\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Example 1 of Hough Transform being robust to people.\relax }}{38}{figure.caption.25}}
+\newlabel{fig: hough2}{{16}{38}{Example 1 of Hough Transform being robust to people.\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Measurement Model and the corresponding differentials}{38}{subsection.4.2.6}}
+\newlabel{sec:linear_math}{{4.2.6}{38}{Measurement Model and the corresponding differentials}{subsection.4.2.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Example 2 of Hough Transform being robust to people.\relax }}{39}{figure.caption.26}}
+\newlabel{fig: hough3}{{17}{39}{Example 2 of Hough Transform being robust to people.\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Normal form of a line.\relax }}{40}{figure.caption.27}}
+\newlabel{fig: normal_form}{{18}{40}{Normal form of a line.\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Line in robot frame and world frame.\relax }}{40}{figure.caption.28}}
+\newlabel{fig: wall_to_world}{{19}{40}{Line in robot frame and world frame.\relax }{figure.caption.28}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces To convert linear features from robot frame to inertial frame.\relax }}{41}{algorithm.2}}
+\newlabel{alg: wall_to_world}{{2}{41}{To convert linear features from robot frame to inertial frame.\relax }{algorithm.2}{}}
+\newlabel{eq:lineModel1}{{(4.10)}{41}{Measurement Model and the corresponding differentials}{equation.4.2.10}{}}
+\newlabel{eq:lineModel2}{{(4.11)}{41}{Measurement Model and the corresponding differentials}{equation.4.2.11}{}}
+\newlabel{eq:lineModel3}{{(4.12)}{41}{Measurement Model and the corresponding differentials}{equation.4.2.12}{}}
+\newlabel{eq:lineModel5}{{(4.13)}{41}{Measurement Model and the corresponding differentials}{equation.4.2.13}{}}
+\newlabel{eq:lineModel6}{{(4.14)}{42}{Measurement Model and the corresponding differentials}{equation.4.2.14}{}}
 \@setckpt{./Chapters/Ransac}{
-\setcounter{page}{28}
-\setcounter{equation}{5}
+\setcounter{page}{43}
+\setcounter{equation}{14}
 \setcounter{enumi}{6}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -34,19 +54,19 @@
 \setcounter{mpfootnote}{0}
 \setcounter{subequation}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{6}
-\setcounter{section}{4}
-\setcounter{subsection}{0}
+\setcounter{chapter}{4}
+\setcounter{section}{2}
+\setcounter{subsection}{6}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{10}
-\setcounter{table}{1}
-\setcounter{parentequation}{5}
+\setcounter{figure}{19}
+\setcounter{table}{0}
+\setcounter{parentequation}{14}
 \setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
-\setcounter{float@type}{8}
+\setcounter{float@type}{16}
 \setcounter{algorithm}{2}
 \setcounter{ALG@line}{2}
 \setcounter{ALG@rem}{2}
@@ -55,12 +75,18 @@
 \setcounter{ALG@blocknr}{10}
 \setcounter{ALG@storecount}{0}
 \setcounter{ALG@tmpcounter}{0}
-\setcounter{LT@tables}{1}
-\setcounter{LT@chunks}{5}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{6}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{39}
 \setcounter{theorem}{0}
 \setcounter{definition}{0}
 \setcounter{lemma}{0}
 \setcounter{remark}{0}
 \setcounter{example}{0}
 \setcounter{assumption}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{2}
 }
