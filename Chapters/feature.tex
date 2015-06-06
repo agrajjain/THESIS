@@ -1,0 +1,14 @@
+\chapter{2D LIDAR Feature Extraction for SLAM}
+\label{cha:featureExtractor}
+
+The exteroceptive sensors on the \imp, described in Chapter \ref{cha:platform } are the Hokuyo Laser range finder and the 5 MP camera. The Hokuyo returns range data in a single plane and features that can be used in SLAM need to be extracted from it. These features might be point features or linear features. 
+
+\section{Feature Extraction with Point Features}
+\label{sec:spike}
+\subsection{Overview}
+A point feature can be completely defined by it's position in the inertial frame. In this section a simplistic algorithm is described that could be used to detect point features in the environment. The algorithm is mainly based on large jumps in the range measurement of the LIDAR. The draw backs of such an algorithm are discussed and improvements using preexisting knowledge of the environment are suggested.
+
+\subsection{Feature Extraction Algorithm}
+\label{sec: spikeAlgo}
+
+In the simulated arena of fig... the important aspects to observe are that, the entire arena is within the range of the LIDAR, and also the cylinders placed to represent point features are all relatively away from the wall. 

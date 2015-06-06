@@ -15,40 +15,40 @@
 \contentsline {subsection}{\numberline {2.2.1}Kalman Filter}{10}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Extended Kalman Filter}{12}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Application of Extended Kalman Filter for SLAM}{13}{section.2.3}
-\contentsline {chapter}{\numberline {III. }Hardware Design and Development of an Integrated Mobile Platform}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview and Design Goals}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Mechanical Design}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Electrical Design}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Device purpose and descriptions}{19}{subsection.3.3.1}
-\contentsline {subsubsection}{AutoPilot}{19}{section*.9}
-\contentsline {subsubsection}{ODROID XU}{21}{section*.10}
-\contentsline {subsubsection}{Encoders}{21}{section*.11}
-\contentsline {subsubsection}{Camera}{21}{section*.13}
-\contentsline {subsubsection}{LIDAR}{22}{section*.14}
-\contentsline {subsubsection}{Communication Modules}{22}{section*.15}
-\contentsline {section}{\numberline {3.4}Software Design for data collection}{23}{section.3.4}
-\contentsline {section}{\numberline {3.5}Encoder Based Odometry for State Estimate}{23}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Motion model and the corresponding differentials}{23}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Limitations of odometry based estimation}{26}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {IV. }2D LIDAR Feature Extraction for SLAM}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Feature Extraction with Point Features}{27}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Overview}{27}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Feature Extraction Algorithm}{27}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Examples}{29}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Measurement Model and the corresponding Jacobian matrices}{30}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Feature Extraction with Linear Features}{33}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Overview}{33}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}RANSAC based Feature Extraction Algorithm}{33}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}RANSAC Examples}{34}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Hough transform based Feature Extraction Algorithm}{35}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Hough Transform Examples}{37}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Measurement Model and the corresponding differentials}{38}{subsection.4.2.6}
-\contentsline {chapter}{\numberline {V. }Implementation and Results}{43}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementation of EKF SLAM algorithm}{43}{section.5.1}
-\contentsline {section}{\numberline {5.2}Experimental Results}{45}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Using Point Features}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Using linear features}{49}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Using a combination of point and linear features}{52}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Uncontrolled environment with linear features}{54}{subsection.5.2.4}
-\contentsline {chapter}{\numberline {VI. }Conclusion}{58}{chapter.6}
-\contentsline {chapter}{References}{60}{chapter*.40}
+\contentsline {chapter}{\numberline {III. }Hardware Design and Development of an Integrated Mobile Platform}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview and Design Goals}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Mechanical Design}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Electrical Subsystem}{20}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Device Purpose and Descriptions}{21}{subsection.3.3.1}
+\contentsline {subsubsection}{AutoPilot}{21}{section*.9}
+\contentsline {subsubsection}{ODROID XU}{22}{section*.11}
+\contentsline {subsubsection}{Encoders}{22}{section*.13}
+\contentsline {subsubsection}{Camera}{23}{section*.15}
+\contentsline {subsubsection}{LIDAR}{24}{section*.16}
+\contentsline {subsubsection}{Communication Modules}{24}{section*.17}
+\contentsline {section}{\numberline {3.4}Software Design for Data Collection}{24}{section.3.4}
+\contentsline {section}{\numberline {3.5}Encoder Based Odometry for State Estimate}{25}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Motion Model and the Corresponding Differentials}{25}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Limitations of Odometry Based Estimation}{28}{subsection.3.5.2}
+\contentsline {chapter}{\numberline {IV. }2D LIDAR Feature Extraction for SLAM}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Feature Extraction with Point Features}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Overview}{29}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Feature Extraction Algorithm}{29}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Examples and Validation on IMP}{31}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Measurement Model and the Corresponding Jacobian Matrices}{32}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Feature Extraction with Linear Features}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Overview}{35}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}RANSAC Based Feature Extraction Algorithm}{35}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}RANSAC Examples}{37}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Hough Transform Based Feature Extraction Algorithm}{37}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Hough Transform Examples}{40}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Measurement Model and the Corresponding Differentials}{40}{subsection.4.2.6}
+\contentsline {chapter}{\numberline {V. }Implementation and Results}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Implementation of EKF SLAM Algorithm}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experimental Results}{47}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Using Point Features}{49}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Using Linear Features}{51}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Using a Combination of Point and Linear Features}{54}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Uncontrolled Environment with Linear Features}{56}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {VI. }Conclusion}{60}{chapter.6}
+\contentsline {chapter}{References}{62}{chapter*.42}

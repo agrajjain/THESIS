@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.7)  18 MAY 2015 09:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.7)  21 MAY 2015 19:38
 entering extended mode
 **Main*Document.tex
 ("D:\THESIS\Main Document.tex"
@@ -545,6 +545,7 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsfysize=\dimen169
 \pspoints=\dimen170
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 14.
 \c@theorem=\count162
 \c@definition=\count163
 \c@lemma=\count164
@@ -602,7 +603,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring ON on input line 39.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -692,7 +693,7 @@ CHAPTER 1
 
 ] [2] [3] [4]) [5] (D:\THESIS\Chapters\slam1.tex
 CHAPTER 2
-<./Images/slam/SLAM_diagram.png, id=468, 840.13875pt x 313.17pt>
+<./Images/slam/SLAM_diagram.png, id=474, 840.13875pt x 313.17pt>
 File: ./Images/slam/SLAM_diagram.png Graphic file (type png)
 
 <use ./Images/slam/SLAM_diagram.png>
@@ -702,416 +703,443 @@ Package pdftex.def Info: ./Images/slam/SLAM_diagram.png used on input line 10.
 
 
 
- <D:/THESIS/Images/slam/SLAM_diagram.png>] [7] [8] [9] [10] [11] [12] [13]
-
-LaTeX Warning: Reference `eq:ekfSLAM_correction' on page 14 undefined on input 
-line 221.
-
-) [14] (D:\THESIS\Chapters\imp.tex
+ <D:/THESIS/Images/slam/SLAM_diagram.png>] [7] [8] [9] [10] [11] [12] [13] [14]
+) [15] (D:\THESIS\Chapters\imp.tex
 CHAPTER 3
-<./Images/Platform/IMP_color.jpg, id=594, 3276.24pt x 1842.885pt>
+<./Images/Platform/IMP_color.jpg, id=601, 3276.24pt x 1842.885pt>
 File: ./Images/Platform/IMP_color.jpg Graphic file (type jpg)
 
 <use ./Images/Platform/IMP_color.jpg>
 Package pdftex.def Info: ./Images/Platform/IMP_color.jpg used on input line 7.
 (pdftex.def)             Requested size: 216.81pt x 121.92885pt.
- [15
+ [16
 
 
 
- <D:/THESIS/Images/Platform/IMP_color.jpg>] [16] <./Images/Platform/IMP.jpg, id
-=603, 523.20468pt x 371.13657pt>
+ <D:/THESIS/Images/Platform/IMP_color.jpg>] [17] <./Images/Platform/IMP.jpg, id
+=610, 523.20468pt x 371.13657pt>
 File: ./Images/Platform/IMP.jpg Graphic file (type jpg)
 
 <use ./Images/Platform/IMP.jpg>
-Package pdftex.def Info: ./Images/Platform/IMP.jpg used on input line 46.
+Package pdftex.def Info: ./Images/Platform/IMP.jpg used on input line 47.
 (pdftex.def)             Requested size: 130.08731pt x 92.27423pt.
 
-<./Images/Platform/IMPtop.jpg, id=604, 460.72125pt x 389.20406pt>
+<./Images/Platform/IMPtop.jpg, id=611, 460.72125pt x 389.20406pt>
 File: ./Images/Platform/IMPtop.jpg Graphic file (type jpg)
 
 <use ./Images/Platform/IMPtop.jpg>
-Package pdftex.def Info: ./Images/Platform/IMPtop.jpg used on input line 53.
+Package pdftex.def Info: ./Images/Platform/IMPtop.jpg used on input line 54.
 (pdftex.def)             Requested size: 130.08731pt x 109.89096pt.
 
-<./Images/Platform/IMPside.jpg, id=605, 510.40688pt x 286.82156pt>
+<./Images/Platform/IMPside.jpg, id=612, 510.40688pt x 286.82156pt>
 File: ./Images/Platform/IMPside.jpg Graphic file (type jpg)
 
 <use ./Images/Platform/IMPside.jpg>
-Package pdftex.def Info: ./Images/Platform/IMPside.jpg used on input line 60.
+Package pdftex.def Info: ./Images/Platform/IMPside.jpg used on input line 61.
 (pdftex.def)             Requested size: 130.08731pt x 73.10132pt.
- [17 <D:/THESIS/Images/Platform/IMP.jpg> <D:/THESIS/Images/Platform/IMPtop.jpg>
+ [18 <D:/THESIS/Images/Platform/IMP.jpg> <D:/THESIS/Images/Platform/IMPtop.jpg>
  <D:/THESIS/Images/Platform/IMPside.jpg>]
-[18] <./Images/Platform/system_diagram.png, id=616, 963.6pt x 542.025pt>
+[19] <./Images/Platform/system_diagram.png, id=623, 889.82437pt x 551.05875pt>
 File: ./Images/Platform/system_diagram.png Graphic file (type png)
 
 <use ./Images/Platform/system_diagram.png>
 Package pdftex.def Info: ./Images/Platform/system_diagram.png used on input lin
-e 111.
-(pdftex.def)             Requested size: 433.62pt x 243.90898pt.
+e 114.
+(pdftex.def)             Requested size: 433.62pt x 268.53284pt.
 
-<./Images/Platform/power_diagram.png, id=617, 1084.05pt x 722.7pt>
+<./Images/Platform/power_diagram.png, id=624, 1084.05pt x 722.7pt>
 File: ./Images/Platform/power_diagram.png Graphic file (type png)
 
 <use ./Images/Platform/power_diagram.png>
 Package pdftex.def Info: ./Images/Platform/power_diagram.png used on input line
- 118.
+ 124.
 (pdftex.def)             Requested size: 433.62pt x 289.07487pt.
- [19 <D:/THESIS/Images/Platform/system_diagram.png>]
+ [20 <D:/THESIS/Images/Platform/system_diagram.png>] [21 <D:/THESIS/Images/Plat
+form/power_diagram.png>]
+<./Images/Platform/APTop1.jpg, id=637, 2007.5pt x 1505.625pt>
+File: ./Images/Platform/APTop1.jpg Graphic file (type jpg)
+
+<use ./Images/Platform/APTop1.jpg>
+Package pdftex.def Info: ./Images/Platform/APTop1.jpg used on input line 137.
+(pdftex.def)             Requested size: 216.81pt x 162.5867pt.
 Missing character: There is no â in font cmr12!
 Missing character: There is no „ in font cmr12!
 Missing character: There is no ¢ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no „ in font cmr12!
 Missing character: There is no ¢ in font cmr12!
- [20 <D:/THESIS/Images/Platform/power_diagram.png>]
-<./Images/Platform/low_pass.png, id=631, 279.444pt x 181.6386pt>
+
+<./Images/Platform/odroidTop1.jpg, id=639, 1722.435pt x 1299.85625pt>
+File: ./Images/Platform/odroidTop1.jpg Graphic file (type jpg)
+
+<use ./Images/Platform/odroidTop1.jpg>
+Package pdftex.def Info: ./Images/Platform/odroidTop1.jpg used on input line 14
+8.
+(pdftex.def)             Requested size: 216.81pt x 163.61218pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Images/Platform/low_pass.png, id=641, 814.54312pt x 524.71031pt>
 File: ./Images/Platform/low_pass.png Graphic file (type png)
 
 <use ./Images/Platform/low_pass.png>
-Package pdftex.def Info: ./Images/Platform/low_pass.png used on input line 136.
+Package pdftex.def Info: ./Images/Platform/low_pass.png used on input line 157.
 
-(pdftex.def)             Requested size: 173.44534pt x 112.73947pt.
- [21 <D:/THESIS/Images/Platform/low_pass.png>] [22]
-<./Images/Encoder/differential_turning.jpg, id=652, 251.0178pt x 245.2362pt>
+(pdftex.def)             Requested size: 216.81pt x 139.66406pt.
+ [22 <D:/THESIS/Images/Platform/APTop1.jpg>] [23 <D:/THESIS/Images/Platform/odr
+oidTop1.jpg> <D:/THESIS/Images/Platform/low_pass.png>] [24]
+<./Images/Encoder/differential_turning.jpg, id=665, 251.0178pt x 245.2362pt>
 File: ./Images/Encoder/differential_turning.jpg Graphic file (type jpg)
 
 <use ./Images/Encoder/differential_turning.jpg>
 Package pdftex.def Info: ./Images/Encoder/differential_turning.jpg used on inpu
-t line 192.
+t line 211.
 (pdftex.def)             Requested size: 130.0857pt x 195.13023pt.
- [23] [24 <D:/THESIS/Images/Encoder/differential_turning.jpg>] [25]) [26] (D:\T
+ [25] [26 <D:/THESIS/Images/Encoder/differential_turning.jpg>] [27]) [28] (D:\T
 HESIS\Chapters\Spike.tex
 CHAPTER 4
-<./Images/Spike/3d_vrep.jpg, id=703, 407.27156pt x 317.68687pt>
+<./Images/Spike/3d_vrep.jpg, id=717, 407.27156pt x 317.68687pt>
 File: ./Images/Spike/3d_vrep.jpg Graphic file (type jpg)
 
 <use ./Images/Spike/3d_vrep.jpg>
-Package pdftex.def Info: ./Images/Spike/3d_vrep.jpg used on input line 17.
+Package pdftex.def Info: ./Images/Spike/3d_vrep.jpg used on input line 20.
 (pdftex.def)             Requested size: 130.08731pt x 101.47281pt.
 
-<./Images/Spike/arena_vrep.jpg, id=704, 264.99pt x 265.74281pt>
+<./Images/Spike/arena_vrep.jpg, id=718, 264.99pt x 265.74281pt>
 File: ./Images/Spike/arena_vrep.jpg Graphic file (type jpg)
 
 <use ./Images/Spike/arena_vrep.jpg>
-Package pdftex.def Info: ./Images/Spike/arena_vrep.jpg used on input line 24.
+Package pdftex.def Info: ./Images/Spike/arena_vrep.jpg used on input line 27.
 (pdftex.def)             Requested size: 130.08731pt x 130.4584pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Spike/Vrep_plot.png, id=707, 1156.32pt x 1011.78pt>
+<./Images/Spike/Vrep_plot.png, id=721, 1156.32pt x 1011.78pt>
 File: ./Images/Spike/Vrep_plot.png Graphic file (type png)
 
 <use ./Images/Spike/Vrep_plot.png>
-Package pdftex.def Info: ./Images/Spike/Vrep_plot.png used on input line 37.
+Package pdftex.def Info: ./Images/Spike/Vrep_plot.png used on input line 40.
 (pdftex.def)             Requested size: 208.13574pt x 182.11253pt.
 
-<./Images/Spike/Vrep_cylinders.png, id=708, 1156.32pt x 1011.78pt>
+<./Images/Spike/Vrep_cylinders.png, id=722, 1156.32pt x 1011.78pt>
 File: ./Images/Spike/Vrep_cylinders.png Graphic file (type png)
 
 <use ./Images/Spike/Vrep_cylinders.png>
-Package pdftex.def Info: ./Images/Spike/Vrep_cylinders.png used on input line 5
-1.
+Package pdftex.def Info: ./Images/Spike/Vrep_cylinders.png used on input line 4
+6.
 (pdftex.def)             Requested size: 208.13574pt x 182.11253pt.
- [27
+ [29
 
 
 
-] [28 <D:/THESIS/Images/Spike/3d_vrep.jpg> <D:/THESIS/Images/Spike/arena_vrep.j
+] [30 <D:/THESIS/Images/Spike/3d_vrep.jpg> <D:/THESIS/Images/Spike/arena_vrep.j
 pg> <D:/THESIS/Images/Spike/Vrep_plot.png> <D:/THESIS/Images/Spike/Vrep_cylinde
 rs.png>]
-<./Images/Spike/overhead.png, id=722, 1927.2pt x 1084.05pt>
+<./Images/Spike/overhead.png, id=737, 1927.2pt x 1084.05pt>
 File: ./Images/Spike/overhead.png Graphic file (type png)
 
 <use ./Images/Spike/overhead.png>
-Package pdftex.def Info: ./Images/Spike/overhead.png used on input line 73.
+Package pdftex.def Info: ./Images/Spike/overhead.png used on input line 78.
 (pdftex.def)             Requested size: 195.12767pt x 109.75119pt.
 
-<./Images/Spike/blank_scan.png, id=723, 445.1832pt x 445.1832pt>
+<./Images/Spike/blank_scan.png, id=738, 445.1832pt x 445.1832pt>
 File: ./Images/Spike/blank_scan.png Graphic file (type png)
 
 <use ./Images/Spike/blank_scan.png>
-Package pdftex.def Info: ./Images/Spike/blank_scan.png used on input line 80.
-(pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
-
-<./Images/Spike/spike_cyl_bad.png, id=725, 735.7086pt x 671.3883pt>
-File: ./Images/Spike/spike_cyl_bad.png Graphic file (type png)
-
-<use ./Images/Spike/spike_cyl_bad.png>
-Package pdftex.def Info: ./Images/Spike/spike_cyl_bad.png used on input line 93
-.
-(pdftex.def)             Requested size: 195.12767pt x 178.06047pt.
-
-<./Images/Spike/spike_cyl_badPol.png, id=726, 445.1832pt x 432.8973pt>
-File: ./Images/Spike/spike_cyl_badPol.png Graphic file (type png)
-
-<use ./Images/Spike/spike_cyl_badPol.png>
-Package pdftex.def Info: ./Images/Spike/spike_cyl_badPol.png used on input line
- 98.
-(pdftex.def)             Requested size: 195.12767pt x 189.74219pt.
- [29 <D:/THESIS/Images/Spike/overhead.png (PNG copy)> <D:/THESIS/Images/Spike/b
-lank_scan.png>]
-<./Images/Spike/spike_good.png, id=732, 445.1832pt x 444.4605pt>
-File: ./Images/Spike/spike_good.png Graphic file (type png)
-
-<use ./Images/Spike/spike_good.png>
-Package pdftex.def Info: ./Images/Spike/spike_good.png used on input line 106.
-(pdftex.def)             Requested size: 173.44534pt x 173.16257pt.
- [30 <D:/THESIS/Images/Spike/spike_cyl_bad.png> <D:/THESIS/Images/Spike/spike_c
-yl_badPol.png> <D:/THESIS/Images/Spike/spike_good.png>] [31]) [32] (D:\THESIS\C
-hapters\Ransac.tex
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 41.
- [33
-
-
-]
-File: ./Images/Spike/blank_scan.png Graphic file (type png)
-
-<use ./Images/Spike/blank_scan.png>
-Package pdftex.def Info: ./Images/Spike/blank_scan.png used on input line 50.
-(pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
-
-<./Images/Ransac/ransac_good.png, id=781, 445.1832pt x 445.1832pt>
-File: ./Images/Ransac/ransac_good.png Graphic file (type png)
-
-<use ./Images/Ransac/ransac_good.png>
-Package pdftex.def Info: ./Images/Ransac/ransac_good.png used on input line 56.
-
+Package pdftex.def Info: ./Images/Spike/blank_scan.png used on input line 85.
 (pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Ransac/ransac_bad.png, id=786, 445.1832pt x 429.2838pt>
+<./Images/Spike/spike_cyl_bad.png, id=740, 735.7086pt x 671.3883pt>
+File: ./Images/Spike/spike_cyl_bad.png Graphic file (type png)
+
+<use ./Images/Spike/spike_cyl_bad.png>
+Package pdftex.def Info: ./Images/Spike/spike_cyl_bad.png used on input line 98
+.
+(pdftex.def)             Requested size: 195.12767pt x 178.06047pt.
+
+<./Images/Spike/spike_cyl_badPol.png, id=741, 445.1832pt x 432.8973pt>
+File: ./Images/Spike/spike_cyl_badPol.png Graphic file (type png)
+
+<use ./Images/Spike/spike_cyl_badPol.png>
+Package pdftex.def Info: ./Images/Spike/spike_cyl_badPol.png used on input line
+ 103.
+(pdftex.def)             Requested size: 195.12767pt x 189.74219pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Images/Spike/spike_good.png, id=742, 445.1832pt x 444.4605pt>
+File: ./Images/Spike/spike_good.png Graphic file (type png)
+
+<use ./Images/Spike/spike_good.png>
+Package pdftex.def Info: ./Images/Spike/spike_good.png used on input line 111.
+(pdftex.def)             Requested size: 173.44534pt x 173.16257pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31] [32 <D:/THESIS/Images/Spike/overhead.png (PNG copy)> <D:/THESIS/Images/Spi
+ke/blank_scan.png> <D:/THESIS/Images/Spike/spike_cyl_bad.png> <D:/THESIS/Images
+/Spike/spike_cyl_badPol.png>] [33 <D:/THESIS/Images/Spike/spike_good.png>])
+[34] (D:\THESIS\Chapters\Ransac.tex
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 41.
+ [35
+
+
+]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+File: ./Images/Spike/blank_scan.png Graphic file (type png)
+ <use ./Images/Spike/blank_scan.png>
+Package pdftex.def Info: ./Images/Spike/blank_scan.png used on input line 59.
+(pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
+
+<./Images/Ransac/ransac_good.png, id=791, 445.1832pt x 445.1832pt>
+File: ./Images/Ransac/ransac_good.png Graphic file (type png)
+
+<use ./Images/Ransac/ransac_good.png>
+Package pdftex.def Info: ./Images/Ransac/ransac_good.png used on input line 65.
+
+(pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
+ [36]
+<./Images/Ransac/ransac_bad.png, id=802, 445.1832pt x 429.2838pt>
 File: ./Images/Ransac/ransac_bad.png Graphic file (type png)
 
 <use ./Images/Ransac/ransac_bad.png>
-Package pdftex.def Info: ./Images/Ransac/ransac_bad.png used on input line 67.
+Package pdftex.def Info: ./Images/Ransac/ransac_bad.png used on input line 76.
 (pdftex.def)             Requested size: 195.12767pt x 188.15836pt.
 
-<./Images/Ransac/ransac_bad1.png, id=787, 445.1832pt x 430.7292pt>
+<./Images/Ransac/ransac_bad1.png, id=803, 445.1832pt x 430.7292pt>
 File: ./Images/Ransac/ransac_bad1.png Graphic file (type png)
 
 <use ./Images/Ransac/ransac_bad1.png>
-Package pdftex.def Info: ./Images/Ransac/ransac_bad1.png used on input line 73.
+Package pdftex.def Info: ./Images/Ransac/ransac_bad1.png used on input line 82.
 
 (pdftex.def)             Requested size: 195.12767pt x 188.7919pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34] [35 <D:/THESIS/Images/Ransac/ransac_good.png> <D:/THESIS/Images/Ransac/ran
-sac_bad.png> <D:/THESIS/Images/Ransac/ransac_bad1.png>] [36]
-
-LaTeX Warning: Reference `cha:Platform' on page 37 undefined on input line 110.
-
-
+[37 <D:/THESIS/Images/Ransac/ransac_good.png>] [38 <D:/THESIS/Images/Ransac/ran
+sac_bad.png> <D:/THESIS/Images/Ransac/ransac_bad1.png>] [39]
 File: ./Images/Spike/blank_scan.png Graphic file (type png)
+
 <use ./Images/Spike/blank_scan.png>
-Package pdftex.def Info: ./Images/Spike/blank_scan.png used on input line 136.
+Package pdftex.def Info: ./Images/Spike/blank_scan.png used on input line 147.
 (pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
 
-<./Images/Ransac/hough1.png, id=816, 445.1832pt x 443.7378pt>
+<./Images/Ransac/hough1.png, id=836, 445.1832pt x 443.7378pt>
 File: ./Images/Ransac/hough1.png Graphic file (type png)
 
 <use ./Images/Ransac/hough1.png>
-Package pdftex.def Info: ./Images/Ransac/hough1.png used on input line 142.
+Package pdftex.def Info: ./Images/Ransac/hough1.png used on input line 153.
 (pdftex.def)             Requested size: 195.12767pt x 194.49365pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./Images/Ransac/overhead2.png, id=817, 1284.8pt x 963.6pt>
+<./Images/Ransac/overhead2.png, id=837, 1284.8pt x 963.6pt>
 File: ./Images/Ransac/overhead2.png Graphic file (type png)
 
 <use ./Images/Ransac/overhead2.png>
-Package pdftex.def Info: ./Images/Ransac/overhead2.png used on input line 154.
+Package pdftex.def Info: ./Images/Ransac/overhead2.png used on input line 165.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<./Images/Ransac/hough2.png, id=818, 445.1832pt x 445.1832pt>
+<./Images/Ransac/hough2.png, id=838, 445.1832pt x 445.1832pt>
 File: ./Images/Ransac/hough2.png Graphic file (type png)
 
 <use ./Images/Ransac/hough2.png>
-Package pdftex.def Info: ./Images/Ransac/hough2.png used on input line 160.
+Package pdftex.def Info: ./Images/Ransac/hough2.png used on input line 171.
 (pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Ransac/overhead3.png, id=819, 1284.8pt x 963.6pt>
+<./Images/Ransac/overhead3.png, id=839, 1284.8pt x 963.6pt>
 File: ./Images/Ransac/overhead3.png Graphic file (type png)
 
 <use ./Images/Ransac/overhead3.png>
-Package pdftex.def Info: ./Images/Ransac/overhead3.png used on input line 171.
+Package pdftex.def Info: ./Images/Ransac/overhead3.png used on input line 182.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<./Images/Ransac/hough3.png, id=820, 445.1832pt x 445.1832pt>
+<./Images/Ransac/hough3.png, id=840, 445.1832pt x 445.1832pt>
 File: ./Images/Ransac/hough3.png Graphic file (type png)
 
 <use ./Images/Ransac/hough3.png>
-Package pdftex.def Info: ./Images/Ransac/hough3.png used on input line 177.
+Package pdftex.def Info: ./Images/Ransac/hough3.png used on input line 188.
 (pdftex.def)             Requested size: 195.12767pt x 195.1272pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] [38 <D:/THESIS/Images/Ransac/hough1.png> <D:/THESIS/Images/Ransac/overhead
-2.png (PNG copy)> <D:/THESIS/Images/Ransac/hough2.png>]
-<./Images/Ransac/normal_form.png, id=834, 268.00125pt x 244.915pt>
-File: ./Images/Ransac/normal_form.png Graphic file (type png)
+<./Images/Ransac/normal_form_2.png, id=842, 201.00093pt x 183.68625pt>
+File: ./Images/Ransac/normal_form_2.png Graphic file (type png)
 
-<use ./Images/Ransac/normal_form.png>
-Package pdftex.def Info: ./Images/Ransac/normal_form.png used on input line 190
-.
-(pdftex.def)             Requested size: 195.12767pt x 178.31557pt.
-
-<./Images/Ransac/wall_to_world.png, id=838, 584.93532pt x 514.17094pt>
+<use ./Images/Ransac/normal_form_2.png>
+Package pdftex.def Info: ./Images/Ransac/normal_form_2.png used on input line 2
+01.
+(pdftex.def)             Requested size: 195.12767pt x 178.31836pt.
+ [40 <D:/THESIS/Images/Ransac/hough1.png>] <./Images/Ransac/wall_to_world.png, 
+id=851, 584.93532pt x 514.17094pt>
 File: ./Images/Ransac/wall_to_world.png Graphic file (type png)
 
 <use ./Images/Ransac/wall_to_world.png>
-Package pdftex.def Info: ./Images/Ransac/wall_to_world.png used on input line 1
-98.
+Package pdftex.def Info: ./Images/Ransac/wall_to_world.png used on input line 2
+09.
 (pdftex.def)             Requested size: 195.12767pt x 171.52065pt.
-
+ [41 <D:/THESIS/Images/Ransac/overhead2.png (PNG copy)> <D:/THESIS/Images/Ransa
+c/hough2.png> <D:/THESIS/Images/Ransac/overhead3.png (PNG copy)> <D:/THESIS/Ima
+ges/Ransac/hough3.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 203.
+               Default added (so using `htbp') on input line 214.
 
-[39 <D:/THESIS/Images/Ransac/overhead3.png (PNG copy)> <D:/THESIS/Images/Ransac
-/hough3.png>] [40 <D:/THESIS/Images/Ransac/normal_form.png> <D:/THESIS/Images/R
-ansac/wall_to_world.png>] [41]) [42] (D:\THESIS\Chapters\results.tex
+[42 <D:/THESIS/Images/Ransac/normal_form_2.png> <D:/THESIS/Images/Ransac/wall_t
+o_world.png>] [43]) [44] (D:\THESIS\Chapters\results.tex
 CHAPTER 5
-[43
+[45
 
 
 
-] <./Images/Results/slam_process.png, id=894, 850.17625pt x 628.3475pt>
+] <./Images/Results/slam_process.png, id=903, 850.17625pt x 628.3475pt>
 File: ./Images/Results/slam_process.png Graphic file (type png)
 
 <use ./Images/Results/slam_process.png>
 Package pdftex.def Info: ./Images/Results/slam_process.png used on input line 1
 6.
 (pdftex.def)             Requested size: 433.62pt x 320.48175pt.
- [44 <D:/THESIS/Images/Results/slam_process.png>]
-<./Images/Results/overhead_path.jpg, id=906, 623.32875pt x 1369.36594pt>
+ [46 <D:/THESIS/Images/Results/slam_process.png>]
+<./Images/Results/overhead_path.jpg, id=914, 623.32875pt x 1369.36594pt>
 File: ./Images/Results/overhead_path.jpg Graphic file (type jpg)
 
 <use ./Images/Results/overhead_path.jpg>
 Package pdftex.def Info: ./Images/Results/overhead_path.jpg used on input line 
 31.
 (pdftex.def)             Requested size: 266.4663pt x 585.38301pt.
- [45] [46 <D:/THESIS/Images/Results/overhead_path.jpg>] <./Images/Results/cylin
-der.png, id=919, 433.62pt x 722.7pt>
+ [47] [48 <D:/THESIS/Images/Results/overhead_path.jpg>] <./Images/Results/cylin
+der.png, id=927, 505.89pt x 722.7pt>
 File: ./Images/Results/cylinder.png Graphic file (type png)
 
 <use ./Images/Results/cylinder.png>
 Package pdftex.def Info: ./Images/Results/cylinder.png used on input line 46.
-(pdftex.def)             Requested size: 351.23027pt x 585.38301pt.
- [47] [48 <D:/THESIS/Images/Results/cylinder.png>] [49] <./Images/Results/walls
-.png, id=941, 433.62pt x 722.7pt>
+(pdftex.def)             Requested size: 409.76865pt x 585.38301pt.
+ [49] [50 <D:/THESIS/Images/Results/cylinder.png>] [51] <./Images/Results/walls
+.png, id=950, 433.62pt x 722.7pt>
 File: ./Images/Results/walls.png Graphic file (type png)
 
 <use ./Images/Results/walls.png>
 Package pdftex.def Info: ./Images/Results/walls.png used on input line 77.
 (pdftex.def)             Requested size: 351.23027pt x 585.38301pt.
- [50] [51 <D:/THESIS/Images/Results/walls.png>] <./Images/Results/both.png, id=
-963, 433.62pt x 722.7pt>
+ [52] [53 <D:/THESIS/Images/Results/walls.png>] <./Images/Results/both.png, id=
+971, 433.62pt x 722.7pt>
 File: ./Images/Results/both.png Graphic file (type png)
 
 <use ./Images/Results/both.png>
 Package pdftex.def Info: ./Images/Results/both.png used on input line 110.
 (pdftex.def)             Requested size: 351.23027pt x 585.38301pt.
- [52] [53 <D:/THESIS/Images/Results/both.png>]
-<./Images/Results/corr1.jpg, id=979, 642.4pt x 481.8pt>
+ [54] [55 <D:/THESIS/Images/Results/both.png>]
+<./Images/Results/corr1.jpg, id=987, 642.4pt x 481.8pt>
 File: ./Images/Results/corr1.jpg Graphic file (type jpg)
 
 <use ./Images/Results/corr1.jpg>
 Package pdftex.def Info: ./Images/Results/corr1.jpg used on input line 144.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<./Images/Results/corr2.jpg, id=980, 642.4pt x 481.8pt>
+<./Images/Results/corr2.jpg, id=988, 642.4pt x 481.8pt>
 File: ./Images/Results/corr2.jpg Graphic file (type jpg)
 
 <use ./Images/Results/corr2.jpg>
 Package pdftex.def Info: ./Images/Results/corr2.jpg used on input line 149.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<./Images/Results/corr3.jpg, id=981, 642.4pt x 481.8pt>
+<./Images/Results/corr3.jpg, id=989, 642.4pt x 481.8pt>
 File: ./Images/Results/corr3.jpg Graphic file (type jpg)
 
 <use ./Images/Results/corr3.jpg>
 Package pdftex.def Info: ./Images/Results/corr3.jpg used on input line 159.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<./Images/Results/corr_human.jpg, id=982, 642.4pt x 481.8pt>
+<./Images/Results/corr_human.jpg, id=990, 642.4pt x 481.8pt>
 File: ./Images/Results/corr_human.jpg Graphic file (type jpg)
 
 <use ./Images/Results/corr_human.jpg>
 Package pdftex.def Info: ./Images/Results/corr_human.jpg used on input line 164
 .
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
- [54 <D:/THESIS/Images/Results/corr1.jpg> <D:/THESIS/Images/Results/corr2.jpg>]
+ [56 <D:/THESIS/Images/Results/corr1.jpg> <D:/THESIS/Images/Results/corr2.jpg>]
 
-<./Images/Results/big_run.png, id=992, 433.62pt x 722.7pt>
+<./Images/Results/big_run.png, id=1001, 433.62pt x 722.7pt>
 File: ./Images/Results/big_run.png Graphic file (type png)
 
 <use ./Images/Results/big_run.png>
 Package pdftex.def Info: ./Images/Results/big_run.png used on input line 180.
 (pdftex.def)             Requested size: 351.23027pt x 585.38301pt.
-) [55 <D:/THESIS/Images/Results/corr3.jpg> <D:/THESIS/Images/Results/corr_human
-.jpg>] [56 <D:/THESIS/Images/Results/big_run.png>] [57] (D:\THESIS\Chapters\Con
+) [57 <D:/THESIS/Images/Results/corr3.jpg> <D:/THESIS/Images/Results/corr_human
+.jpg>] [58 <D:/THESIS/Images/Results/big_run.png>] [59] (D:\THESIS\Chapters\Con
 clusion.tex
 CHAPTER 6
-) [58
+) [60
 
 
 
-] [59] ("D:\THESIS\Main Document.bbl" [60
+] [61] ("D:\THESIS\Main Document.bbl" [62
 
 
-] [61] [62] [63] [64] [65]
+] [63] [64] [65] [66] [67]
 Missing character: There is no Ì in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 
-[66]
+[68]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 402.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 433.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 402.
- [67] [68])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 433.
+ [69] [70])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
 
-[69]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
+[71]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  ("D:\THESIS\Main Document.aux" (D:\THESIS\Roman\vita.aux)
 (D:\THESIS\Roman\acknowledgments.aux) (D:\THESIS\Roman\dedication.aux)
 (D:\THESIS\Roman\abs.aux) (D:\THESIS\Chapters\intro.aux)
 (D:\THESIS\Chapters\slam1.aux) (D:\THESIS\Chapters\imp.aux)
 (D:\THESIS\Chapters\Spike.aux) (D:\THESIS\Chapters\Ransac.aux)
 (D:\THESIS\Chapters\results.aux) (D:\THESIS\Chapters\Conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `Main*Document.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 11555 strings out of 493921
- 172922 string characters out of 3147268
- 283308 words of memory out of 3000000
- 14194 multiletter control sequences out of 15000+200000
+ 11561 strings out of 493921
+ 173082 string characters out of 3147268
+ 280405 words of memory out of 3000000
+ 14197 multiletter control sequences out of 15000+200000
  14548 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  38i,9n,39p,1707b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1127,9 +1155,9 @@ m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Main Document.pdf" (80 pages, 9114377 bytes).
+Output written on "Main Document.pdf" (82 pages, 11202664 bytes).
 PDF statistics:
- 1218 PDF objects out of 1440 (max. 8388607)
- 329 named destinations out of 1000 (max. 500000)
- 575 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1213 PDF objects out of 1440 (max. 8388607)
+ 328 named destinations out of 1000 (max. 500000)
+ 585 words of extra memory for PDF output out of 10000 (max. 10000000)
 

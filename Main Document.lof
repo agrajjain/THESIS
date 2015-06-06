@@ -2,32 +2,34 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {1}{\ignorespaces Block diagram of probabilistic SLAM process.\relax }}{6}{figure.caption.4}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2}{\ignorespaces The Integrated Mobile Platform.\relax }}{15}{figure.caption.5}
-\contentsline {figure}{\numberline {3}{\ignorespaces Dimensions of Integrated Mobile Platform.\relax }}{17}{figure.caption.6}
-\contentsline {figure}{\numberline {4}{\ignorespaces System diagram of Integrated Mobile Platform.\relax }}{19}{figure.caption.7}
-\contentsline {figure}{\numberline {5}{\ignorespaces Integrated Mobile PlatformPower routing diagram.\relax }}{20}{figure.caption.8}
-\contentsline {figure}{\numberline {6}{\ignorespaces Low pass filter for encoder input.\relax }}{21}{figure.caption.12}
-\contentsline {figure}{\numberline {7}{\ignorespaces Motion model of differential drive platform.\relax }}{24}{figure.caption.16}
+\contentsline {figure}{\numberline {2}{\ignorespaces The Integrated Mobile Platform.\relax }}{16}{figure.caption.5}
+\contentsline {figure}{\numberline {3}{\ignorespaces Dimensions of Integrated Mobile Platform.\relax }}{18}{figure.caption.6}
+\contentsline {figure}{\numberline {4}{\ignorespaces System diagram of Integrated Mobile Platform.\relax }}{20}{figure.caption.7}
+\contentsline {figure}{\numberline {5}{\ignorespaces Integrated Mobile PlatformPower routing diagram.\relax }}{21}{figure.caption.8}
+\contentsline {figure}{\numberline {6}{\ignorespaces Autopilot on the Integrated Mobile Platform.\relax }}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {7}{\ignorespaces Odroid on the Integrated Mobile Platform.\relax }}{23}{figure.caption.12}
+\contentsline {figure}{\numberline {8}{\ignorespaces Low pass filter for encoder input.\relax }}{23}{figure.caption.14}
+\contentsline {figure}{\numberline {9}{\ignorespaces Motion model of differential drive platform.\relax }}{26}{figure.caption.18}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {8}{\ignorespaces Simulated arena for LIDAR.\relax }}{28}{figure.caption.17}
-\contentsline {figure}{\numberline {9}{\ignorespaces Differential based LIDAR feature detection\relax }}{28}{figure.caption.18}
-\contentsline {figure}{\numberline {10}{\ignorespaces Real world arena.\relax }}{29}{figure.caption.19}
-\contentsline {figure}{\numberline {11}{\ignorespaces Spurious cylinders detected in data.\relax }}{30}{figure.caption.20}
-\contentsline {figure}{\numberline {12}{\ignorespaces After filtering of candidate cylinders.\relax }}{30}{figure.caption.21}
-\contentsline {figure}{\numberline {13}{\ignorespaces Example of walls detected by RANSAC.\relax }}{35}{figure.caption.22}
-\contentsline {figure}{\numberline {14}{\ignorespaces Example of spurious walls marked by RANSAC.\relax }}{35}{figure.caption.23}
-\contentsline {figure}{\numberline {15}{\ignorespaces Example of walls detected by Hough Transform.\relax }}{38}{figure.caption.24}
-\contentsline {figure}{\numberline {16}{\ignorespaces Example 1 of Hough Transform being robust to people.\relax }}{38}{figure.caption.25}
-\contentsline {figure}{\numberline {17}{\ignorespaces Example 2 of Hough Transform being robust to people.\relax }}{39}{figure.caption.26}
-\contentsline {figure}{\numberline {18}{\ignorespaces Normal form of a line.\relax }}{40}{figure.caption.27}
-\contentsline {figure}{\numberline {19}{\ignorespaces Line in robot frame and world frame.\relax }}{40}{figure.caption.28}
+\contentsline {figure}{\numberline {10}{\ignorespaces Simulated arena for LIDAR.\relax }}{30}{figure.caption.19}
+\contentsline {figure}{\numberline {11}{\ignorespaces Differential based LIDAR feature detection.\relax }}{30}{figure.caption.20}
+\contentsline {figure}{\numberline {12}{\ignorespaces Real world arena.\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {13}{\ignorespaces Spurious cylinders detected in data.\relax }}{32}{figure.caption.22}
+\contentsline {figure}{\numberline {14}{\ignorespaces After filtering of candidate cylinders.\relax }}{33}{figure.caption.23}
+\contentsline {figure}{\numberline {15}{\ignorespaces Example of walls detected by RANSAC.\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {16}{\ignorespaces Example of spurious walls marked by RANSAC.\relax }}{38}{figure.caption.25}
+\contentsline {figure}{\numberline {17}{\ignorespaces Example of walls detected by Hough transform.\relax }}{40}{figure.caption.26}
+\contentsline {figure}{\numberline {18}{\ignorespaces Example 1 of Hough transform being robust to additional objects (e.g.,\ people) in the environment.\relax }}{41}{figure.caption.27}
+\contentsline {figure}{\numberline {19}{\ignorespaces Example 1 of Hough transform being robust to additional objects (e.g.,\ people) in the environment.\relax }}{41}{figure.caption.28}
+\contentsline {figure}{\numberline {20}{\ignorespaces Normal form of a line.\relax }}{42}{figure.caption.29}
+\contentsline {figure}{\numberline {21}{\ignorespaces Line in robot frame and world frame.\relax }}{42}{figure.caption.30}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {20}{\ignorespaces SLAM Implementation using only LIDAR\relax }}{44}{figure.caption.29}
-\contentsline {figure}{\numberline {21}{\ignorespaces Controlled environment and path reconstructed by an overhead camera.\relax }}{46}{figure.caption.30}
-\contentsline {figure}{\numberline {22}{\ignorespaces Controlled environment and path reconstructed by detecting point features in LIDAR data. Path starts from the origin.\relax }}{48}{figure.caption.31}
-\contentsline {figure}{\numberline {23}{\ignorespaces Controlled environment and path reconstructed by detecting linear features in LIDAR data. Path starts from the origin.\relax }}{51}{figure.caption.33}
-\contentsline {figure}{\numberline {24}{\ignorespaces Controlled environment and path reconstructed by detecting both point and linear features in LIDAR data. Path starts from the origin\relax }}{53}{figure.caption.35}
-\contentsline {figure}{\numberline {25}{\ignorespaces Passages forming an uncontrolled environment\relax }}{54}{figure.caption.37}
-\contentsline {figure}{\numberline {26}{\ignorespaces Obstacles in an uncontrolled environment\relax }}{55}{figure.caption.38}
-\contentsline {figure}{\numberline {27}{\ignorespaces Uncontrolled environment and path reconstructed by detecting linear features in LIDAR data. Path starts from the origin.\relax }}{56}{figure.caption.39}
+\contentsline {figure}{\numberline {22}{\ignorespaces SLAM Implementation using only LIDAR.\relax }}{46}{figure.caption.31}
+\contentsline {figure}{\numberline {23}{\ignorespaces Controlled environment and path reconstructed by an overhead camera.\relax }}{48}{figure.caption.32}
+\contentsline {figure}{\numberline {24}{\ignorespaces Controlled environment and path reconstructed by detecting point features in LIDAR data. Path starts from the origin.\relax }}{50}{figure.caption.33}
+\contentsline {figure}{\numberline {25}{\ignorespaces Controlled environment and path reconstructed by detecting linear features in LIDAR data. Path starts from the origin.\relax }}{53}{figure.caption.35}
+\contentsline {figure}{\numberline {26}{\ignorespaces Controlled environment and path reconstructed by detecting both point and linear features in LIDAR data. Path starts from the origin\relax }}{55}{figure.caption.37}
+\contentsline {figure}{\numberline {27}{\ignorespaces Passages forming an uncontrolled environment.\relax }}{56}{figure.caption.39}
+\contentsline {figure}{\numberline {28}{\ignorespaces Obstacles in an uncontrolled environment.\relax }}{57}{figure.caption.40}
+\contentsline {figure}{\numberline {29}{\ignorespaces Uncontrolled environment and path reconstructed by detecting linear features in LIDAR data. Path starts from the origin.\relax }}{58}{figure.caption.41}
 \addvspace {10pt}

@@ -5,13 +5,13 @@
 \newtagform{defaultoveride}{}{}
 \usetagform{defaultoveride}
 
-%\hypersetup{
-%    colorlinks,
-%    citecolor=black,
-%    filecolor=black,
-%    linkcolor=black,
-%    urlcolor=black
-%}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 \renewcommand{\baselinestretch}{1.6}
 \newtheorem{theorem}{Theorem}[chapter]
 \newcommand{\btheorem}{\begin{theorem}\rm}
@@ -31,7 +31,7 @@
 \newcommand{\eassump}{\end{assumption}}
 
 
-\newcommand{\ekf}{Extended Kalman Filter }
+\newcommand{\ekf}{Extended Kalman Filter}
 \newcommand{\slam}{Simultaneous Localization and Mapping}
 \newcommand{\imp}{Integrated Mobile Platform}
 \graphicspath{{./Images/Encoder/}, {./Images/Spike/}, {./Images/Ransac/},{./Images/Platform/},{./Images/Results/},{./Images/slam/}}
@@ -40,7 +40,7 @@
 \title{SIMULTANEOUS LOCALIZATION AND MAPPING ON AN INTEGRATED MOBILE PLATFORM}
 \author{Agraj Jain}
 \date{May, 2015}
-\committee{1}
+\committee{ }
 
 \mstitlepage
 \endmstitlepage 
@@ -68,11 +68,14 @@
 \include{./Chapters/slam1}
 %\include{./Chapters/Platform}
 \include{./Chapters/imp}
+%\include{./Chapters/feature}
 \include{./Chapters/Spike}
 \include{./Chapters/Ransac}
 \include{./Chapters/results} 
 \include{./Chapters/Conclusion}
 \chapter*{References}
-\bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,bibliography}
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,bibliography}
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
 \end{document}

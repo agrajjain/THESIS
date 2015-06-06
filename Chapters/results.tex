@@ -1,9 +1,9 @@
 \chapter{Implementation and Results}
 \label{cha:results}
 
-\section{Implementation of EKF SLAM algorithm}
+\section{Implementation of EKF SLAM Algorithm}
 \label{sec:slam_process}
-The SLAM algorithm, as discussed in chapter \ref{cha:Overview}, consists of subparts each of which present challenges of its own. The primary purpose of this thesis is to develop a flexible implementation that can accommodate different algorithms for the subparts,hence, the guiding principle of the implementation is modularity. Hence an object oriented language such as Python is the platform of choice. This allows us to create individual objects for each part of the algorithm which can be substituted with ease to utilize different combinations of algorithms for feature extraction, association and filtering. 
+The SLAM algorithm, as discussed in Chapter~\ref{cha:Overview}, consists of subparts each of which present challenges of its own. The primary purpose of this thesis is to develop a flexible implementation that can accommodate different algorithms for the subparts,hence, the guiding principle of the implementation is modularity. Hence an object oriented language such as Python is the platform of choice. This allows us to create individual objects for each part of the algorithm which can be substituted with ease to utilize different combinations of algorithms for feature extraction, association and filtering. 
 
 During the initial setup, all the objects are created and initialized. A robot object is instantiated with its initial position and covariance representing the uncertainty in its position. This object holds the robot's position and uncertainty all through the runtime. It also contains objects for all the sensors and components that the actual robot contains. For example, an object of ENCODER class is instantiated with all its properties such as its noise factors, the diameter of the wheels it is attached on, and the separation between the wheels. A LIDAR object is also instantiated with the minimum and maximum range of the Hokuyo, the offset of the LIDAR from the center of the platform, and the measurement noise factors. These sensor objects are attached to the Robot object into proprioceptive and exteroceptive sensor lists, respectively. The proprioceptive sensors contain methods to calculate the motion model of the robot and also its Jacobian matrices.
 To the exteroceptive sensors, feature extractor objects are attached. Each feature extraction algorithm is implemented as its own class. All such classes have to have a particular structure based on the sensor whose data the extractor uses. For LIDAR based extractors,  there has to be a function called \textit{get\_landmarks()} which takes in angles and distances and returns a list of landmark locations. They also need a member variable named \textit{landmarkType} which contains the type of landmark that the extractor is trying to find. 
@@ -14,18 +14,18 @@ The main part of SLAM is carried out by an object of EKF class. This object cont
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{slam_process}
-\caption{SLAM Implementation using only LIDAR}
+\caption{SLAM Implementation using only LIDAR.}
 \label{fig:slam_process}
 \end{figure}
-Once initial setup is made, the robot object is added to the EKF map. Then for each time step, the \textit{run()} method of the EKF object is called. In this function the first step is prediction wherein for each robot in the map, the \textit{predict()} method of the robot object is called. That in turn calls the \textit{update()} method of all the proprioceptive sensors attached to that robot. This gives the estimated position and uncertainty using equation \ref{eq:Enc_3}. 
+Once initial setup is made, the robot object is added to the EKF map. Then for each time step, the \textit{run()} method of the EKF object is called. In this function the first step is prediction wherein for each robot in the map, the \textit{predict()} method of the robot object is called. That in turn calls the \textit{update()} method of all the proprioceptive sensors attached to that robot. This gives the estimated position and uncertainty using Equation~\ref{eq:Enc_3}. 
 
 Then the \textit{observe()} method of the robot is called which in turn calls the exteroceptive sensors which generate landmark objects for all the landmarks seen at that time step. Each of these landmark objects are then checked to see if they are associated with a landmark preexisting in the map. For each re-observed landmark, the innovation and Kalman gain are calculated and the whole state is corrected. The map objects are then updated with the corrected positions. 
 
 \section{Experimental Results}
 
-To test the impact of the two feature extraction algorithms discussed in Chapter~\ref{cha:featureExtractors} on \slam, the \imp was driven around in first a controlled and then an uncontrolled indoor environment while continuously logging data. The Encoder and IMU data was logged at high speed at 100 Hz, and the LIDAR and Camera was logged at 5 Hz. The logged data was then analyzed using an EKF SLAM algorithm implemented as described in Section~\ref{sec:slam_process}. 
+To test the impact of the two feature extraction algorithms discussed in Chapter~\ref{cha:featureExtractor} on \slam, the \imp was driven around in first a controlled and then an uncontrolled indoor environment while continuously logging data. The Encoder and IMU data was logged at high speed at 100 Hz, and the LIDAR and Camera was logged at 5 Hz. The logged data was then analyzed using an EKF SLAM algorithm implemented as described in Section~\ref{sec:slam_process}. 
 
-In the controlled environment, the two ends of a regular corridor are sealed off resulting in a closed space with no other features except walls and cylinders placed intentionally. This enables us to test the point feature extraction algorithm and see its effect on SLAM both individually and in combination with Hough transform based linear feature extraction. The controlled environment along with the path taken by IMP is seen in Figure~\ref{fig:overhead_path}. The closed-off space is still large enough such that it is not entirely within the range of the LIDAR. Hence, the problems and modifications discussed in Chapter~\ref{cha:featureExtractors} are still relevant even in a clean environment. 
+In the controlled environment, the two ends of a regular corridor are sealed off resulting in a closed space with no other features except walls and cylinders placed intentionally. This enables us to test the point feature extraction algorithm and see its effect on SLAM both individually and in combination with Hough transform based linear feature extraction. The controlled environment along with the path taken by IMP is seen in Figure~\ref{fig:overhead_path}. The closed-off space is still large enough such that it is not entirely within the range of the LIDAR. Hence, the problems and modifications discussed in Chapter~\ref{cha:featureExtractor} are still relevant even in a clean environment. 
 \begin{figure}
 \centering
 \includegraphics[height = 0.9\textheight]{overhead_path}
@@ -65,12 +65,12 @@ In the part of the path that is shown in the upper right quadrant in Figure~\ref
 \end{tabular} 
 \end{table}
 
-\subsection{Using linear features}
+\subsection{Using Linear Features}
 \label{sec: hough_results}
 
 In the controlled environment of Figure~\ref{fig:overhead_path}, the linear features are the 4 walls enclosing the space. For wall detection, two algorithms are discussed in Section~\ref{sec:extraction}. The RANSAC based algorithm, when implemented in the way discussed is seen to be not robust in Figure~\ref{fig: ransac_bad}. When used in SLAM it generates a number of spurious landmarks which result in wrong data association and subsequent correction. This results in the reconstruction being highly erroneous. 
 
-Hence the Hough transform based algorithm is used. As described in Section~\ref{sec:hough}, the only tuning parameters for that algorithm are the pixel and angular resolution and threshold for line detection. Since these are broad parameters any reasonable value may be chosen. Since we use an image of 1000~$ \times $~1000 pixels to represent 10~m~$ \times $~10~m space in the real world, the physical significance of the pixel resolution is the minimum distance in centimeters that walls need to be far from each other for them to be considered as 2 individual walls instead of one. The angular resolution is useful as it avoids finding multiple walls with small angles between them. This is especially useful while reconstructing indoor environments as most walls tend to intersect at right angles hence corresponding to a very low probability that the actual line features intersect at a small angle. In this arena, an angular resolution of $ 10^\circ $ and a distance resolution of 2~cm is chosen. This allows a good reconstruction while speeding up the Hough transform itself as the size of the accumulator from equation \ref{eq:hough3} is reduced. 
+Hence the Hough transform based algorithm is used. As described in Section~\ref{sec:hough}, the only tuning parameters for that algorithm are the pixel and angular resolution and threshold for line detection. Since these are broad parameters any reasonable value may be chosen. Since we use an image of 1000~$ \times $~1000 pixels to represent 10~m~$ \times $~10~m space in the real world, the physical significance of the pixel resolution is the minimum distance in centimeters that walls need to be far from each other for them to be considered as 2 individual walls instead of one. The angular resolution is useful as it avoids finding multiple walls with small angles between them. This is especially useful while reconstructing indoor environments as most walls tend to intersect at right angles hence corresponding to a very low probability that the actual line features intersect at a small angle. In this arena, an angular resolution of $ 10^\circ $ and a distance resolution of 2~cm is chosen. This allows a good reconstruction while speeding up the Hough transform itself as the size of the accumulator from Equation~\ref{eq:hough3} is reduced. 
 
 \begin{figure}
 \centering
@@ -100,10 +100,10 @@ It is seen that the SLAM reconstruction is able to track the actual position for
 \end{tabular} 
 \end{table}
 
-\subsection{Using a combination of point and linear features}
+\subsection{Using a Combination of Point and Linear Features}
 \label{sec:combo_result}
 
-As seen in Section~\ref{sec:slam_process}, the implementation of SLAM algorithm is designed to use both kinds of features simultaneously. With all the implementation details as in Sections \ref{sec:Spike_results} and \ref{sec: hough_results}, the reconstructed path is shown in Figure~\ref{fig:combo_result}.
+As seen in Section~\ref{sec:slam_process}, the implementation of SLAM algorithm is designed to use both kinds of features simultaneously. With all the implementation details as in Sections~\ref{sec:Spike_results} and~\ref{sec: hough_results}, the reconstructed path is shown in Figure~\ref{fig:combo_result}.
 
 \begin{figure}
 \centering
@@ -115,10 +115,10 @@ As seen in Section~\ref{sec:slam_process}, the implementation of SLAM algorithm 
 
 From the path, it is seen that a few of the errors from the previous two reconstructions have been corrected. For example, in Figure~\ref{fig:cylinder_result}, there is a large error in the top left part of the plot due to the cylinder not being detected robustly. In this path, the lack of the  cylinder feature is compensated for by using the walls. Since it is a corner region the algorithm is able to correct both position and orientation. In Figure~\ref{fig:wall_result}, there is a jump in the path near the left wall, and the left wall is reconstructed at an angle, as discussed in Section~\ref{sec: hough_results}. When the robot is traveling parallel to the left wall, it has 2 cylinders in its field of view, and hence, this jump is avoided.
 
-There are still deviations from the path near the left wall as both the linear features based and the point features based reconstructions had both deviated at that region, a combination of the two cannot yield an accurate reconstruction, though it can be better than either one individually. The environment reconstruction errors are tabulated in Table~\ref{tab:combo_results}
+There are still deviations from the path near the left wall as both the linear features based and the point features based reconstructions had both deviated at that region, a combination of the two cannot yield an accurate reconstruction, though it can be better than either one individually. The environment reconstruction errors are tabulated in Table~\ref{tab:combo_results}.
 
 \begin{table}
-\caption{Error in environment reconstruction using combination of linear and point features}
+\caption{Error in environment reconstruction using combination of linear and point features.}
 \label{tab:combo_results}
 \begin{tabular}{| l | c | c | c |}
 \hline ~ & Actual Position (x,y) & Detected Position (x,y) & Error(m)\\
@@ -136,7 +136,7 @@ There are still deviations from the path near the left wall as both the linear f
 
 To compare the reconstructions, we can compare the landmark error values from the tables. In Table~\ref{tab:combo_results}, the total of all the cylinder errors is 0.0231 m. The corresponding errors in Table~\ref{tab:cylinder_results} add up to 0.1223 m. Hence, in terms of finding the location of the cylinders using the combination of both kinds of features reduces the error by 81.1\%. Similarly The total error in walls, for the combination of both is 0.142 and with just linear features is 0.132. Hence, using the combination of features is seen to increase the error, but only by 8\%. If we consider the end position of the robot, we see that compared to the point features based reconstruction, there is a 80\% reduction of error in the reconstruction using both types of features and a 47.5\% reduction compared to using only linear features. 
 
-\subsection{Uncontrolled environment with linear features}
+\subsection{Uncontrolled Environment with Linear Features}
 
 \begin{figure}
     \centering
@@ -149,7 +149,7 @@ To compare the reconstructions, we can compare the landmark error values from th
         \includegraphics[width=\textwidth]{corr2}
     \end{subfigure}%
 
-    \caption{Passages forming an uncontrolled environment}
+    \caption{Passages forming an uncontrolled environment.}
     \label{fig:onboard_1}
 \end{figure}
 
@@ -164,14 +164,14 @@ To compare the reconstructions, we can compare the landmark error values from th
         \includegraphics[width=\textwidth]{corr_human}
     \end{subfigure}%
 
-    \caption{Obstacles in an uncontrolled environment}
+    \caption{Obstacles in an uncontrolled environment.}
     \label{fig:onboard_2}
 \end{figure}
 The primary purpose of implementing EKF SLAM is to run it in real time. For this, it is essential that the tuning parameters previously discussed should not need to be tuned for each specific arena configuration. Hence, a longer run in an uncontrolled environment  with the same tuning parameters is analyzed.
 
-From Section~\ref{sec:combo_result}, it is clear that the linear features based SLAM is relatively accurate compared to point features based SLAM. Although the combination of both walls and cylinders for SLAM gave the best results, the feature extractor for cylinder is seen to be conservative and not entirely robust. In Section~\ref{sec:hough} it was shown that the Hough transform based linear feature extractor is robust to humans in its field of view. Hence for a long range uncontrolled indoor environment, the linear feature based SLAM is an ideal candidate. 
+From Section~\ref{sec:combo_result}, it is clear that the linear features based SLAM is relatively accurate compared to point features based SLAM. Although the combination of both walls and cylinders for SLAM gave the best results, the feature extractor for cylinder is seen to be conservative and not entirely robust. In Section~\ref{sec:hough}, it was shown that the Hough transform based linear feature extractor is robust to humans in its field of view. Hence for a long range uncontrolled indoor environment, the linear feature based SLAM is an ideal candidate. 
 
-To test this, the robot is driven around a long passage which has both open and closed doors on either side as seen in Figure~\ref{fig:onboard_1} There are also people walking around and entering and leaving through those doors. As seen in Figure~\ref{fig:onboard_2}, there are also other unintentional point features in the environment. 
+To test this, the robot is driven around a long passage which has both open and closed doors on either side as seen in Figure~\ref{fig:onboard_1}. There are also people walking around and entering and leaving through those doors. As seen in Figure~\ref{fig:onboard_2}, there are also other unintentional point features in the environment. 
 
 This gives a challenge for both EKF based SLAM and for the Hough feature extractor. The correction should ideally be made based only on walls and not other lines such as door ways etc. For SLAM itself, since the distance traveled is much larger and the velocity with which the robot moves is also larger, the encoders drift by a considerable amount as seen in Figure~\ref{fig:big_run}. Since the run is in a larger environment, the ground truth is approximated manually, without any overhead camera data. It can be seen that linear feature based SLAM does a good job in estimating the path traveled compared to the odometry. It does not completely reconstruct the ground truth due to the large number of disturbances throughout it's path such as doors. Towards the end of the run, a number of estimated wall are seen due to the shape of the passages in that region. 
 
@@ -182,4 +182,4 @@ This gives a challenge for both EKF based SLAM and for the Hough feature extract
 \label{fig:big_run}
 \end{figure}
 
-Hence, it is seen that in an uncontrolled environment, the Hough transform based linear feature detector performs well at reconstructing the path of the robot, even though the reconstruction of the environment is not accurate. It is also seen that the tuning parameters chosen in Section~\ref{sec:Spike_results} and \ref{sec: hough_results}, are robust and do not need to be changed for similar environments. 
+Hence, it is seen that in an uncontrolled environment, the Hough transform based linear feature detector performs well at reconstructing the path of the robot, even though the reconstruction of the environment is not accurate. It is also seen that the tuning parameters chosen in Sections~\ref{sec:Spike_results} and~\ref{sec: hough_results}, are robust and do not need to be changed for similar environments. 
